@@ -17,8 +17,13 @@ struct Partido{
     list<Ciudad> ciudadesActivas;
     
     //Constructor
-    Partido(string nombre_, string representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {}
-    
+    Partido(string nombre_, string representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {};
+
+    friend ostream& operator<< (ostream& salida, const Partido& partido) {
+    salida << "Nombre: " << partido.nombre<< ", Representante legal: " << partido.representanteLegal;
+    return salida;
+}
+
 	};
 
 #endif

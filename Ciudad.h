@@ -17,10 +17,17 @@ struct Ciudad
     //Atributos Funcionales
 	list<Persona> CandidatosConsejo;
 	list<Persona> CandidatosAlcaldia;
-	list<Persona> Habitantes;
+	list<Persona> listaHabitantes;
 	
 	//Constructor
 	Ciudad(string nombre_, string departamento_, int tamanioConsejo_, int habitantes_) : nombre(nombre_), departamento(departamento_), tamanioConsejo(tamanioConsejo_), habitantes(habitantes_) {}
+
+    friend ostream& operator<< (ostream& salida, const Ciudad& ciudad) {
+    salida << "Nombre: " << ciudad.nombre;
+    return salida;
+}
 };
+
+
 
 #endif

@@ -1,0 +1,44 @@
+Partido 1. Nombre: conservador, Representante legal: janeth
+     ciudad 1. Nombre: medallo
+          candidatos alcaldia
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          candidatos Consejo
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          habitantes
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+     ciudad 2. Nombre: bogota
+          candidatos alcaldia
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          candidatos Consejo
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          habitantes
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+------------------------------------
+Partido 2. Nombre: liberal, Representante legal: jairo
+     ciudad 1. Nombre: medallo
+          candidatos alcaldia
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          candidatos Consejo
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          habitantes
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+     ciudad 2. Nombre: bogota
+          candidatos alcaldia
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          candidatos Consejo
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+          habitantes
+          persona 1. Nombre: Juan, Apellido: Perez
+          persona 2. Nombre: Joan, Apellido: garzon
+------------------------------------
