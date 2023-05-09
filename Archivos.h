@@ -3,11 +3,16 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <fstream>
+#include <list>
+#include <stdlib.h>
+#include <string.h>
+#include <fstream>
+
 #include "Ciudad.h"
 #include "Persona.h"
 #include "Partido.h"
-#include <fstream>
-#include <list>
+
 using namespace std;
 
 ofstream archivo("datos.txt");
@@ -47,4 +52,30 @@ void guardar(list<Partido> multilistaPartido){
 }
 }
 
+void leer(){
+	ifstream data;
+	data.open("datos.txt",ios::in);
+	
+	if(data.fail()){
+		cout << "problema al abrir";
+	}else{
+		cout << "Todo bien, El archivo comienza aqui: " << endl;
+		while(!data.eof()){
+			string x;
+			getline(data,x);
+			int num_tabs = 0;
+    		size_t pos = x.find("@");
+    		while(pos == 0){
+        		num_tabs++;
+        		pos = x.find("@", pos+1); // Busca la siguiente ocurrencia de una tabulación
+    		}
+
+    		if(num_tabs == 1){ 
+        		cout << x << endl;
+        		cout << "..." << endl;
+			}	
+			archivo.close();
+		}
+	}
+}
 #endif
