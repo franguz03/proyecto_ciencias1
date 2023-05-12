@@ -11,11 +11,12 @@ struct Persona
     long int identificacion;
     char sexo;
 	struct tm fechaNacimiento;
+	int votos;
 	
 	//Constructor
 	Persona(string nombre_, string apellido_, long int identificacion_, char sexo_, string estado_civil_, string ciudad_nacimiento_, string ciudad_residencia_, 
             struct tm fechaNacimiento_) : nombre(nombre_), apellido(apellido_), identificacion(identificacion_), sexo(sexo_), estado_civil(estado_civil_), 
-            ciudad_nacimiento(ciudad_nacimiento_), ciudad_residencia(ciudad_residencia_), fechaNacimiento(fechaNacimiento_) {}
+            ciudad_nacimiento(ciudad_nacimiento_), ciudad_residencia(ciudad_residencia_), fechaNacimiento(fechaNacimiento_) {votos = 0;}
 
    friend ostream& operator<< (ostream& salida, const Persona& persona) {
         salida << "Nombre: " << persona.nombre << ", Apellido: " << persona.apellido;

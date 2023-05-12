@@ -1,4 +1,4 @@
-Partido 1. Nombre: conservador, Representante legal: janeth
+P1 conservador Nombre: Juan, Apellido: Perez
      ciudad 1. Nombre: medallo
           candidatos alcaldia
           persona 1. Nombre: Juan, Apellido: Perez
@@ -20,7 +20,7 @@ Partido 1. Nombre: conservador, Representante legal: janeth
           persona 1. Nombre: Juan, Apellido: Perez
           persona 2. Nombre: Joan, Apellido: garzon
 ------------------------------------
-Partido 2. Nombre: liberal, Representante legal: jairo
+P2 liberal Nombre: Joan, Apellido: garzon
      ciudad 1. Nombre: medallo
           candidatos alcaldia
           persona 1. Nombre: Juan, Apellido: Perez

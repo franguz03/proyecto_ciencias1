@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "Ciudad.h"
+#include "Persona.h"
 #include <iomanip>
 #include <list>
 
@@ -11,18 +12,19 @@ using namespace std;
 
 struct Partido{
     //Atributos Reglas de negocio:
-	string nombre, representanteLegal;
+	string nombre;
+	Persona representanteLegal;
 	
     //Atributos Funcionales
     list<Ciudad> ciudadesActivas;
     
     //Constructor
-    Partido(string nombre_, string representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {};
+    Partido(string nombre_, Persona representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {};
 
     friend ostream& operator<< (ostream& salida, const Partido& partido) {
-    salida << "Nombre: " << partido.nombre<< ", Representante legal: " << partido.representanteLegal;
-    return salida;
-}
+ 	   salida << partido.nombre << " " << partido.representanteLegal;
+    	return salida;
+	}
 
 	};
 

@@ -27,14 +27,14 @@ int main(int argc, char *argv[]){
 	c2.listaHabitantes=listaDePersonas;
 	listaciudades.push_back(c1);
 	listaciudades.push_back(c2);
-	Partido partido1("conservador","janeth");
-	Partido partido2("liberal","jairo");
+	Partido partido1("conservador",p);
+	Partido partido2("liberal",x);
 	partido1.ciudadesActivas=listaciudades;
 	partido2.ciudadesActivas=listaciudades;
 	list<Partido> listaPartidos;
 	listaPartidos.push_back(partido1);
 	listaPartidos.push_back(partido2);
-
+	
 	guardar(listaPartidos);
 	cout << "------------------- lectura -------------------------";
 	leer();
