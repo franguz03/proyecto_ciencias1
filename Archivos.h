@@ -23,41 +23,32 @@ void guardar(list<Partido> multilistaPartido){
     int contPartido=0;
     
     for (auto itk =multilistaPartido.begin(); itk != multilistaPartido.end(); ++itk){
-        contPartido++;
-        archivo <<"P"<< contPartido<< " "<<*itk<< endl;
-        int contCiuadad=0;
-        cout<<"     ciudades registradas"<<endl;
+        archivo <<*itk<< endl;
      	for (auto it =(*itk).ciudadesActivas.begin(); it != (*itk).ciudadesActivas.end(); ++it){//accede a la multilista de ciudad, utiliza begin como itedaror que se guarda en it
-        	contCiuadad++;
-        	archivo <<"     ciudad "<< contCiuadad<<". "<<*it<< endl;//guarda las propiedades de it en el txt
-        	archivo<<"          candidatos alcaldia"<<endl;
-        	int contPersona=0;
+        	archivo << endl <<" "<<*it<< endl;//guarda las propiedades de it en el txt
+        	//Empieza a guardar los de la alcaldia
         	for (auto it2 =(*it).CandidatosAlcaldia.begin(); it2 != (*it).CandidatosAlcaldia.end(); ++it2){//accede a la lista de alcaldia del iteraor it y lo guarda en it2
-            	contPersona++;
-            	archivo<<"          "<<"persona "<< contPersona<<". "<<*it2<<endl;//guarda las propiedades de it2(persona) en el txt
+            	archivo<<"  "<<*it2<<endl;//guarda las propiedades de it2(persona) en el txt
         	}
-        	contPersona=0;
-        	archivo<<"          candidatos Consejo"<<endl;
+        	
+        	archivo << endl; //Empieza a guardar los del consejo
         	for (auto it3 =(*it).CandidatosConsejo.begin(); it3 != (*it).CandidatosConsejo.end(); ++it3){
-            	contPersona++;
-	            archivo<<"          "<<"persona "<< contPersona<<". "<<*it3<<endl;
+	            archivo<<"  "<<*it3<<endl;
     	    }
-        	contPersona=0;
-        	archivo<<"          habitantes"<<endl;
+    	    
+        	archivo << endl; //Empieza a guardar los habitantes
         	for (auto it4 =(*it).listaHabitantes.begin(); it4 != (*it).listaHabitantes.end(); ++it4){
-            	contPersona++;
-            	archivo <<"          "<<"persona "<< contPersona<<". "<<*it4<<endl;
+            	archivo <<"  "<<*it4<<endl;
         	}
      }   
-    archivo<<"------------------------------------"<<endl;
+    archivo<<endl;
 	}
 	
 	archivo.close();
 }
 
-void leer(){
+void leer(list<Partido> multilistaPartido){
 	ifstream archivo;
-
 	archivo.open("datos.txt", ios::in);
 	
 	if(archivo.fail()){

@@ -22,7 +22,7 @@ struct Partido{
     Partido(string nombre_, Persona representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {};
 
     friend ostream& operator<< (ostream& salida, const Partido& partido) {
- 	   salida << partido.nombre << " " << partido.representanteLegal;
+ 	   salida << partido.nombre << "-" << partido.representanteLegal;
     	return salida;
 	}
 

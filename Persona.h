@@ -19,7 +19,8 @@ struct Persona
             ciudad_nacimiento(ciudad_nacimiento_), ciudad_residencia(ciudad_residencia_), fechaNacimiento(fechaNacimiento_) {votos = 0;}
 
    friend ostream& operator<< (ostream& salida, const Persona& persona) {
-        salida << "Nombre: " << persona.nombre << ", Apellido: " << persona.apellido;
+        salida << persona.nombre << "," << persona.apellido << "," << persona.estado_civil << "," << persona.ciudad_nacimiento << "," << persona.ciudad_residencia << "," << persona.identificacion<< "," 
+		<< persona.sexo; //<< "," << persona.fechaNacimiento;
         return salida;
 }         
 };

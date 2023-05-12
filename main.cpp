@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
 	
 	guardar(listaPartidos);
 	cout << "------------------- lectura -------------------------";
-	leer();
+	//leer();
 
 }
 
