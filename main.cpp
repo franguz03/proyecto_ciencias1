@@ -35,9 +35,10 @@ int main(int argc, char *argv[]){
 	listaPartidos.push_back(partido1);
 	listaPartidos.push_back(partido2);
 	
-	guardar(listaPartidos);
-	cout << "------------------- lectura -------------------------";
-	//leer();
+	//guardar(listaPartidos);
+	cout << "------------------- lectura -------------------------"<<endl;
+	list<Partido> newListaPartidos;
+	leer(newListaPartidos);
 
 }
 
