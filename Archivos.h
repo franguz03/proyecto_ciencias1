@@ -25,7 +25,7 @@ void guardar(list<Partido> multilistaPartido){
     for (auto itk =multilistaPartido.begin(); itk != multilistaPartido.end(); ++itk){
         archivo <<*itk<< endl;
      	for (auto it =(*itk).ciudadesActivas.begin(); it != (*itk).ciudadesActivas.end(); ++it){//accede a la multilista de ciudad, utiliza begin como itedaror que se guarda en it
-        	archivo <<" "<<*it<< endl;//guarda las propiedades de it en el txt
+        	archivo << endl << " "<<*it<< endl;//guarda las propiedades de it en el txt
         	
         	//Empieza a guardar los de la alcaldia
         	for (auto it2 =(*it).CandidatosAlcaldia.begin(); it2 != (*it).CandidatosAlcaldia.end(); ++it2){//accede a la lista de alcaldia del iteraor it y lo guarda en it2
@@ -58,31 +58,31 @@ void leer(list<Partido> multilistaPartido){
 		while(!archivo.eof()){	
 			string linea;
             getline(archivo,linea);
-			if (!linea.empty()){
-				if(linea[0] != ' '){
-					cout << "Partido: "<< linea << endl;
-                	//CODIGO PARA CREAR EL PARTIDO	
-                	linea = "";
-    				getline(archivo,linea);
-                	while(linea[0] == ' ' && linea [1] != ' '){
-                		getline(archivo,linea);
-						cout << "ciudad: " << linea << endl; //PUSH CIUDAD
-						while(!linea.empty() && linea[0] == ' ' && linea [1] == ' '){
-							linea = "";
-    						getline(archivo,linea);
-							cout << "Alcaldia: " << linea << endl; //PUSH ALCALDIA
-						}
-						while(!linea.empty() && linea[0] == ' ' && linea [1] == ' '){
-							linea = "";
-    						getline(archivo,linea);
-							cout << "Consejo: " << linea << endl; //PUSH CONSEJO
-						}
-						while(!linea.empty() && linea[0] == ' ' && linea [1] == ' '){
-							linea = "";
-    						getline(archivo,linea);
-							cout << "Habitantes: " << linea << endl; //PUSH HABITANTES
-						}
-					}
+            if(linea[0] != ' ' && !linea.empty()){
+            	//CODIGO PARA PUSHEAR PARTIDO
+            	cout << "Partido: "<< linea << endl;
+			} else if(linea[1] != ' '){
+				if(!linea.empty()){
+					//CODIGO PARA PUSHEAR CIUDAD
+					cout << "Ciudad: "<< linea << endl;
+				}
+			} else if(linea[2] != ' '){
+				while(!linea.empty()){
+					// CODIGO PARA PUSHEAR CANDIDATOS ALCALDIA
+    				cout << "Alcaldia: " << linea << endl;
+					getline(archivo,linea);
+				}
+				getline(archivo,linea);
+				while(!linea.empty()){
+					// CODIGO PARA PUSHEAR CANDIDATOS CONSEJO
+    				cout << "Consejo: " << linea << endl;
+					getline(archivo,linea);
+				}
+				getline(archivo,linea);
+				while(!linea.empty()){ 				
+					// CODIGO PARA PUSHEAR PERSONAS 
+    				cout << "Persona: " << linea << endl;
+					getline(archivo,linea);
 				}
 			}
     	}

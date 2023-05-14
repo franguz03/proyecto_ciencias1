@@ -1,5 +1,6 @@
 conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M
- medallo,antioquia,23,1158
+
+ medallo,antioquia,23,348
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
@@ -8,7 +9,8 @@ conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M
 
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
- bogota,cundinamarca,23,1158
+
+ bogota,cundinamarca,23,348
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
@@ -19,7 +21,8 @@ conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
 liberal-Joan,garzon,Soltero,Medellin,Bogota,123456789,M
- medallo,antioquia,23,1158
+
+ medallo,antioquia,23,348
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
@@ -28,7 +31,8 @@ liberal-Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
- bogota,cundinamarca,23,1158
+
+ bogota,cundinamarca,23,348
   Juan,Perez,Soltero,Medellin,Bogota,123456789,M
   Joan,garzon,Soltero,Medellin,Bogota,123456789,M
 
