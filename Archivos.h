@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fstream>
+#include <sstream>
+#include <vector>
 
 #include "Ciudad.h"
 #include "Persona.h"
@@ -16,6 +18,16 @@
 using namespace std;
 
 
+vector<string> splitString(const string& str, char delimiter) {
+    vector<string> tokens;
+    stringstream ss(str);
+    string token;
+
+    while (getline(ss, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
 
 void guardar(list<Partido> multilistaPartido){
     
@@ -60,27 +72,41 @@ void leer(list<Partido> multilistaPartido){
             getline(archivo,linea);
             if(linea[0] != ' ' && !linea.empty()){
             	//CODIGO PARA PUSHEAR PARTIDO
-            	cout << "Partido: "<< linea << endl;
+            	/*
+				vector<string> Split1 = splitString(linea,'-');
+            	vector<string> Split2 = splitString(partes[1],',');
+            	Partido p1(partes[0],partes[1]);
+				multilistaPartido.push_back(p1);
+				*/
+				//
 			} else if(linea[1] != ' '){
 				if(!linea.empty()){
 					//CODIGO PARA PUSHEAR CIUDAD
+					
+					//
 					cout << "Ciudad: "<< linea << endl;
 				}
 			} else if(linea[2] != ' '){
 				while(!linea.empty()){
 					// CODIGO PARA PUSHEAR CANDIDATOS ALCALDIA
+					
+					//
     				cout << "Alcaldia: " << linea << endl;
 					getline(archivo,linea);
 				}
 				getline(archivo,linea);
 				while(!linea.empty()){
 					// CODIGO PARA PUSHEAR CANDIDATOS CONSEJO
+					
+					//
     				cout << "Consejo: " << linea << endl;
 					getline(archivo,linea);
 				}
 				getline(archivo,linea);
 				while(!linea.empty()){ 				
 					// CODIGO PARA PUSHEAR PERSONAS 
+					
+					//
     				cout << "Persona: " << linea << endl;
 					getline(archivo,linea);
 				}
