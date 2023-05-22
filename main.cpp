@@ -35,10 +35,13 @@ int main(int argc, char *argv[]){
 	listaCiudades.push_back(c1);
 	listaCiudades.push_back(c2);
 	
-	//guardar(listaCiudades);
+	guardar(listaCiudades);
 	
-	list<Ciudad> listaLecturaCiudades;
-	leer(listaLecturaCiudades);
+	list<Ciudad> listaLecturaCiudades = leer();
+	// guardar(listaLecturaCiudades);
 
+    return 0;
 }
+
+	
 

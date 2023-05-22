@@ -48,7 +48,8 @@ void guardar(list<Ciudad> multilistaCiudad){
 }
 	
 
-void leer(list<Ciudad> multilistaCiudad){
+list<Ciudad> leer(){
+	list<Ciudad> multilistaCiudad;
 	int numCiudades = 0;
 	int numPartidos = 0;
 	ifstream archivo;
@@ -56,6 +57,7 @@ void leer(list<Ciudad> multilistaCiudad){
 	if(archivo.fail()){
 		cout << "Problema al abrir el archivo" << endl;	
 	}else{
+		cout << "leyendo..." << endl;
 		while(!archivo.eof()){
 			string linea;
             getline(archivo,linea);
@@ -67,14 +69,15 @@ void leer(list<Ciudad> multilistaCiudad){
 				multilistaCiudad.push_back(c);
 				//cout << "Ciudad: " << linea << endl;
 				numCiudades++;
+				numPartidos = 0;
 			}else if(linea[1] != ' ' && !linea.empty()){
 				//Codigo para reconstruir habitantes
-					vector<string> data = splitString(linea,',');
-            		Persona p(data[0],data[1],stol(data[5]),data[6][0],data[2],data[3],data[4],data[7]);
-            		list<Ciudad>::iterator it = multilistaCiudad.begin();
-            		advance(it,numCiudades-1);
-            		it->listaHabitantes.push_back(p);
-				//cout << "Num Ciudad: " << numCiudades << "Habitante: " << linea << endl;
+				vector<string> data = splitString(linea,',');
+            	Persona p(data[0],data[1],stol(data[5]),data[6][0],data[2],data[3],data[4],data[7]);
+           		list<Ciudad>::iterator it = multilistaCiudad.begin();
+           		advance(it,numCiudades-1);
+           		it->listaHabitantes.push_back(p);
+				//cout << "Num Ciudad: " << numCiudades << " Habitante: " << linea << endl;
 			}else if(linea[2]!= ' ' && !linea.empty()){
 				//Codigo para reconstruir partido
 				vector<string> data = splitString(linea,'-');
@@ -96,13 +99,17 @@ void leer(list<Ciudad> multilistaCiudad){
 						list<Partido>::iterator it2 = it->listaPartidosHabilitados.begin();
 						advance(it2,numPartidos);
 						it2->listaCandidatosConsejo.push_back(p);
-						//cout << "Consejo: " << linea << endl;	
-					}
+						// cout << "Num: "<< numPartidos << " Consejo: " << linea << endl;	
+					}	
 				}
 				numPartidos++;
-			}
-		}	
-	}
+			}	
+		}
 	archivo.close();
+	}
+}
+
+void imprimir(list<Ciudad> multilistaCiudad){
+	
 }
 #endif
