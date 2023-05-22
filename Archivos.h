@@ -49,6 +49,8 @@ void guardar(list<Ciudad> multilistaCiudad){
 	
 
 void leer(list<Ciudad> multilistaCiudad){
+	int numCiudades = 0;
+	int numPartidos = 0;
 	ifstream archivo;
 	archivo.open("datos.txt", ios::in);
 	if(archivo.fail()){
@@ -60,28 +62,44 @@ void leer(list<Ciudad> multilistaCiudad){
 			//cout << linea << endl;
 			if(linea[0] != ' ' && !linea.empty()){
 				//Codigo para reconstruir una ciudad;
-				
-				//
-				cout << "Ciudad: " << linea << endl;
+				vector<string> data = splitString(linea,',');
+				Ciudad c(data[0],data[1],stoi(data[2]));
+				multilistaCiudad.push_back(c);
+				//cout << "Ciudad: " << linea << endl;
+				numCiudades++;
 			}else if(linea[1] != ' ' && !linea.empty()){
 				//Codigo para reconstruir habitantes
-				
-				//
-				cout << "Habitante: " << linea << endl;
+					vector<string> data = splitString(linea,',');
+            		Persona p(data[0],data[1],stol(data[5]),data[6][0],data[2],data[3],data[4],data[7]);
+            		list<Ciudad>::iterator it = multilistaCiudad.begin();
+            		advance(it,numCiudades-1);
+            		it->listaHabitantes.push_back(p);
+				//cout << "Num Ciudad: " << numCiudades << "Habitante: " << linea << endl;
 			}else if(linea[2]!= ' ' && !linea.empty()){
 				//Codigo para reconstruir partido
-				
-				//
-				cout << "Partido: " << linea << endl;
+				vector<string> data = splitString(linea,'-');
+            	vector<string> data2 = splitString(data[1],',');
+            	vector<string> data3 = splitString(data[2],',');
+            	Persona repre(data2[0],data2[1],stol(data2[5]),data2[6][0],data2[2],data2[3],data2[4],data2[7]);
+            	Persona candi(data3[0],data3[1],stol(data3[5]),data3[6][0],data3[2],data3[3],data3[4],data3[7]);
+            	Partido p(data[0],repre,candi);
+            	list<Ciudad>::iterator it = multilistaCiudad.begin();
+            	advance(it,numCiudades-1);
+            	it->listaPartidosHabilitados.push_back(p);
+				//cout << "Partido: " << linea << endl;
 				while(!linea.empty()){
 					getline(archivo,linea);
 					if(!linea.empty()){
 						//Codigo para reconstruir candidatos al consejo
-					
-						//
-					cout << "Consejo: " << linea << endl;	
+						vector<string> data = splitString(linea,',');
+						Persona p(data[0],data[1],stol(data[5]),data[6][0],data[2],data[3],data[4],data[7]);
+						list<Partido>::iterator it2 = it->listaPartidosHabilitados.begin();
+						advance(it2,numPartidos);
+						it2->listaCandidatosConsejo.push_back(p);
+						//cout << "Consejo: " << linea << endl;	
 					}
 				}
+				numPartidos++;
 			}
 		}	
 	}
