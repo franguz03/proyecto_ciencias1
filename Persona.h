@@ -6,7 +6,7 @@ using namespace std;
 
 struct Persona 
 {
-    //Atributos Reglas de negocio:
+    //Atributos inicializados
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;
     long int identificacion;
     char sexo;

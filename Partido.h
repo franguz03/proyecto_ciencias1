@@ -3,7 +3,6 @@
 
 #include <iostream>
 
-#include "Ciudad.h"
 #include "Persona.h"
 #include <iomanip>
 #include <list>
@@ -11,18 +10,19 @@
 using namespace std;
 
 struct Partido{
-    //Atributos Reglas de negocio:
+    //Atributos inicializados
 	string nombre;
 	Persona representanteLegal;
-	
-    //Atributos Funcionales
-    list<Ciudad> ciudadesActivas;
+	Persona candidatoAlcaldia;
     
+	//Atributos pusheables
+    list<Persona> listaCandidatosConsejo;
+        
     //Constructor
-    Partido(string nombre_, Persona representanteLegal_) : nombre(nombre_), representanteLegal(representanteLegal_) {};
+    Partido(string nombre_, Persona representanteLegal_,Persona candidatoAlcaldia_) : nombre(nombre_), representanteLegal(representanteLegal_), candidatoAlcaldia(candidatoAlcaldia_){};
 
     friend ostream& operator<< (ostream& salida, const Partido& partido) {
- 	   salida << partido.nombre << "-" << partido.representanteLegal;
+ 	   salida << partido.nombre << "-" << partido.representanteLegal << "-" << partido.candidatoAlcaldia;
     	return salida;
 	}
 

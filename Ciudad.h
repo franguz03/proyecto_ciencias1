@@ -1,6 +1,7 @@
 #ifndef CIUDAD_H
 #define CIUDAD_H
 #include "Persona.h"
+#include "Partido.h"
 
 #include <cstdlib>
 #include <ctime>
@@ -12,23 +13,19 @@ using namespace std;
  
 struct Ciudad
 {
-    //Atributos Reglas de negocio:
+    //Atributos Inicializados
     string nombre, departamento;
-    int tamanioConsejo; //Suceptible de definici�n
-    int habitantes;
+    int tamanioConsejo; 
     
-    //Atributos Funcionales
-	list<Persona> CandidatosConsejo;
-	Persona CandidatoAlcaldia;
+    //Atributos pusheables
 	list<Persona> listaHabitantes;
+	list<Partido> listaPartidosHabilitados;
 	
 	//Constructor
-	Ciudad(string nombre_, string departamento_, int tamanioConsejo_, int habitantes_,Persona CandidatoAlcaldia_) : nombre(nombre_), departamento(departamento_), tamanioConsejo(tamanioConsejo_),CandidatoAlcaldia(CandidatoAlcaldia_) {
-  		habitantes = 100;
-	}
+	Ciudad(string nombre_, string departamento_, int tamanioConsejo_) : nombre(nombre_), departamento(departamento_), tamanioConsejo(tamanioConsejo_) {}
 
     friend ostream& operator<< (ostream& salida, const Ciudad& ciudad) {
-    salida << ciudad.nombre << "," << ciudad.departamento << "," << ciudad.tamanioConsejo << "," << ciudad.habitantes;
+    salida << ciudad.nombre << "," << ciudad.departamento << "," << ciudad.tamanioConsejo;
     return salida;
 }
 };

@@ -9,34 +9,36 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-
-	struct tm fechaNacimiento = {0, 0, 0, 1, 0, 100};
 	Persona p("Juan", "Perez", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-	Persona x("Joan", "garzon", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-	list<Persona> listaDePersonas;
-	listaDePersonas.push_back(p);
-	listaDePersonas.push_back(x);
-	Ciudad c1("medallo","antioquia",23,2323,x);
-	Ciudad c2("bogota","cundinamarca",23,2323,p);
-	list<Ciudad> listaciudades;
-	c1.CandidatosConsejo=listaDePersonas;
-	c2.CandidatosConsejo=listaDePersonas;
-	c1.listaHabitantes=listaDePersonas;
-	c2.listaHabitantes=listaDePersonas;
-	listaciudades.push_back(c1);
-	listaciudades.push_back(c2);
-	Partido partido1("conservador",p);
-	Partido partido2("liberal",x);
-	partido1.ciudadesActivas=listaciudades;
-	partido2.ciudadesActivas=listaciudades;
-	list<Partido> listaPartidos;
-	listaPartidos.push_back(partido1);
-	listaPartidos.push_back(partido2);
+	Persona x("Pedro", "garzon", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
+	Partido partido1("conservador",p,p);
+	Partido partido2("liberal",x,x);
+	Ciudad c1("medallo","antioquia",2);
+	Ciudad c2("bogota","cundinamarca",2);
 	
-	//guardar(listaPartidos);
+	partido1.listaCandidatosConsejo.push_back(p);
+	partido1.listaCandidatosConsejo.push_back(x);
+	partido2.listaCandidatosConsejo.push_back(p);
+	partido2.listaCandidatosConsejo.push_back(x);
 	
-	list<Partido> newListaPartidos;
-	leer(newListaPartidos);
+	c1.listaHabitantes.push_back(p);
+	c1.listaHabitantes.push_back(x);
+	c1.listaPartidosHabilitados.push_back(partido1);
+	c1.listaPartidosHabilitados.push_back(partido2);
+	
+	c2.listaHabitantes.push_back(p);
+	c2.listaHabitantes.push_back(x);
+	c2.listaPartidosHabilitados.push_back(partido1);
+	c2.listaPartidosHabilitados.push_back(partido2);
+	
+	list<Ciudad> listaCiudades;
+	listaCiudades.push_back(c1);
+	listaCiudades.push_back(c2);
+	
+	//guardar(listaCiudades);
+	
+	list<Ciudad> listaLecturaCiudades;
+	leer(listaLecturaCiudades);
 
 }
 

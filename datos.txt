@@ -1,40 +1,24 @@
-conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+medallo,antioquia,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
- medallo,antioquia,23,100
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+bogota,cundinamarca,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
- bogota,cundinamarca,23,100
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-liberal-Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
- medallo,antioquia,23,100
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
- bogota,cundinamarca,23,100
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-
-  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-  Joan,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
