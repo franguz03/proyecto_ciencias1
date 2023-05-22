@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-//#include <iomanip>
 #include <list>	
 
 
@@ -20,15 +19,12 @@ struct Ciudad
     
     //Atributos Funcionales
 	list<Persona> CandidatosConsejo;
-	list<Persona> CandidatosAlcaldia;
+	Persona CandidatoAlcaldia;
 	list<Persona> listaHabitantes;
 	
 	//Constructor
-	Ciudad(string nombre_, string departamento_, int tamanioConsejo_, int habitantes_) : nombre(nombre_), departamento(departamento_), tamanioConsejo(tamanioConsejo_){
-		srand(time(NULL));
-  		int minimo = 1;
-  		int maximo = 100;
-  		habitantes = 100 + rand() % (2000 - 100 + 1); // 100 min hab, 2000 max hab
+	Ciudad(string nombre_, string departamento_, int tamanioConsejo_, int habitantes_,Persona CandidatoAlcaldia_) : nombre(nombre_), departamento(departamento_), tamanioConsejo(tamanioConsejo_),CandidatoAlcaldia(CandidatoAlcaldia_) {
+  		habitantes = 100;
 	}
 
     friend ostream& operator<< (ostream& salida, const Ciudad& ciudad) {

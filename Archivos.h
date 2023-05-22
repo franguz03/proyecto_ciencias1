@@ -39,10 +39,7 @@ void guardar(list<Partido> multilistaPartido){
      	for (auto it =(*itk).ciudadesActivas.begin(); it != (*itk).ciudadesActivas.end(); ++it){//accede a la multilista de ciudad, utiliza begin como itedaror que se guarda en it
         	archivo << endl << " "<<*it<< endl;//guarda las propiedades de it en el txt
         	
-        	//Empieza a guardar los de la alcaldia
-        	for (auto it2 =(*it).CandidatosAlcaldia.begin(); it2 != (*it).CandidatosAlcaldia.end(); ++it2){//accede a la lista de alcaldia del iteraor it y lo guarda en it2
-            	archivo<<"  "<<*it2<<endl;//guarda las propiedades de it2(persona) en el txt
-        	}
+        	archivo << "  " << (*it).CandidatoAlcaldia << endl;//Guarda el candidato a la alcaldia
         	
         	archivo << endl; //Empieza a guardar los del consejo
         	for (auto it3 =(*it).CandidatosConsejo.begin(); it3 != (*it).CandidatosConsejo.end(); ++it3){
@@ -71,18 +68,18 @@ void leer(list<Partido> multilistaPartido){
 			string linea;
             getline(archivo,linea);
             if(linea[0] != ' ' && !linea.empty()){
-            	//CODIGO PARA PUSHEAR PARTIDO
-            	/*
 				vector<string> Split1 = splitString(linea,'-');
-            	vector<string> Split2 = splitString(partes[1],',');
-            	Partido p1(partes[0],partes[1]);
-				multilistaPartido.push_back(p1);
-				*/
-				//
+            	vector<string> Split2 = splitString(Split1[1],',');
+				long int x = stol(Split2[5]);
+				char y = Split2[6][0];
+            	Persona p(Split2[0],Split2[1],stol(Split2[5]),Split2[6][0],Split2[2],Split2[3],Split2[4],Split2[7]);
+            	Partido pa(Split1[0],p);
+				multilistaPartido.push_back(pa);
+				cout << "Partido: "<< linea << endl;
 			} else if(linea[1] != ' '){
 				if(!linea.empty()){
 					//CODIGO PARA PUSHEAR CIUDAD
-					
+					vector<string> Split1 = splitString(linea,'-');	
 					//
 					cout << "Ciudad: "<< linea << endl;
 				}
