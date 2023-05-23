@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <list>
 #include "Archivos.h"
+#include "Consultas.h"
 
 using namespace std;
 
@@ -36,10 +37,33 @@ int main(int argc, char *argv[]){
 	listaCiudades.push_back(c2);
 	
 	guardar(listaCiudades);
-	
 	list<Ciudad> listaLecturaCiudades = leer();
-	// guardar(listaLecturaCiudades);
 
+	Persona p2("enrique", "larosa", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
+	Persona p3("sara", "cardona", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
+
+
+	//cambia el candidato a alcaldia de mellado-conservador
+	agregar_candidato_alcaldia(listaLecturaCiudades,"medallo","conservador",p2);
+
+	//agrega candidato a consejo de mellado-conservador
+	agregar_candidato_consejo(listaLecturaCiudades,"medallo","conservador",p3);
+
+	// lista de candidatos al consejo y alcaldia segun ciudad y partido
+	
+	candidatos_ciudad_partido(listaLecturaCiudades,"medallo","conservador");
+	cout<<"-------------------------------"<<"\n";
+
+	//mostrar candidatos a alcaldia de un partido por cada ciudad
+	alcaldia_ciudad(listaLecturaCiudades,"conservador");
+
+	cout<<"-------------------------------"<<"\n";
+
+	//mostrar candidatos a consejo de un partido por cada ciudad
+	consejo_ciudad(listaLecturaCiudades,"conservador");
+
+
+	
     return 0;
 }
 

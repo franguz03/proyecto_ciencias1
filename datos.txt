@@ -1,24 +1,25 @@
-Pereira,Risaralda,2
+medallo,antioquia,2
  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
  Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  conservador-Abelardo,Gutierrez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Donatello,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-   Francisco,Montaner,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-   Pacho,Sandoval,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-enrique,larosa,Soltero,Medellin,Bogota,12345689,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   sara,cardona,Soltero,Medellin,Bogota,12345689,M,10/08/2020
 
-  liberal-Juan,Santos,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pacho,Ginnebra,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-   Alexander,Char,Soltero,Medellin,Bogota,123456789,M,10/08/2020
-   Juan,Ventura,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
 bogota,cundinamarca,2
  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
  Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  Colombia Humana-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-  Polo Democratico-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
