@@ -66,7 +66,7 @@ list<Ciudad> leer(){
 	if(archivo.fail()){
 		cout << "Problema al abrir el archivo" << endl;	
 	}else{
-		cout << "leyendo..." << endl;
+		cout<<"\n"<< "leyendo..." << endl;
 		while(!archivo.eof()){
 			string linea;
             getline(archivo,linea);

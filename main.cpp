@@ -6,10 +6,14 @@
 #include <list>
 #include "Archivos.h"
 #include "Consultas.h"
+#include "funcionesAdicionales.cpp"
 
 using namespace std;
 
+
 int main(int argc, char *argv[]){
+	
+	/*
 	Persona p("Juan", "Perez", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
 	Persona x("Pedro", "garzon", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
 	Partido partido1("conservador",p,p);
@@ -61,8 +65,9 @@ int main(int argc, char *argv[]){
 
 	//mostrar candidatos a consejo de un partido por cada ciudad
 	consejo_ciudad(listaLecturaCiudades,"conservador");
+*/
 
-
+	menu_principal();
 	
     return 0;
 }

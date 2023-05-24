@@ -128,6 +128,8 @@ void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciu
 //agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
 
 void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Partido Partido) {
+
+
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             ciudad.listaPartidosHabilitados.push_back(Partido);
