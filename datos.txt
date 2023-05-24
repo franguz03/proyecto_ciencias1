@@ -1,6 +1,6 @@
 medallo,antioquia,2
- Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
- Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1920
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2000
 
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-enrique,larosa,Soltero,Medellin,Bogota,12345689,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
@@ -12,8 +12,8 @@ medallo,antioquia,2
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
 bogota,cundinamarca,2
- Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
- Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
 
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020

@@ -13,12 +13,13 @@
 #include "Ciudad.h"
 #include "Persona.h"
 #include "Partido.h"
+#include "Archivos.h"
+#include "funcionesAdicionales.cpp"
 
 using namespace std;
 
-// lista de candidatos al consejo y alcaldia segun ciudad y partido
+// ------------ CONSULTA #1 DADO UN PARTIDO Y UNA CIUDAD MOSTRAR LA LISTA DE SUS CANDIDATOS AL CONSEJO Y EL CANDIDATO A LA ALCALDIA
 void candidatos_ciudad_partido(list<Ciudad> multilistaCiudad,string nombre_ciudad, string nombre_partido){
-       
     for (const auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             for(const auto& partido : ciudad.listaPartidosHabilitados){
@@ -40,9 +41,7 @@ void candidatos_ciudad_partido(list<Ciudad> multilistaCiudad,string nombre_ciuda
 cout<<"ciudad no encontrada";
 }
 
-
-//mostrar candidatos a alcaldia de un partido por cada ciudad
-
+// ------------ CONSULTA #2 DADO UN PARTIDO MOSTRAR LA LISTA DE CANDIDATOS A ALCALDIAS DE CADA UNA DE LAS DIFERENTES CIUDADES
 void alcaldia_ciudad(list<Ciudad> multilistaCiudad,string nombre_partido){
     bool c=false;
     cout<<"partido "<<nombre_partido<<"\n";
@@ -53,18 +52,15 @@ void alcaldia_ciudad(list<Ciudad> multilistaCiudad,string nombre_partido){
                 cout<<partido.candidatoAlcaldia<<"\n";
                 c=true;      
         }
-        
     }
     if(c==false){
           cout<<"la ciudad "<<ciudad.nombre<<" no tiene representantes de este partido"<<"\n";  
         }
         c=false;
-
+	}
 }
-}
 
-//mostrar candidatos a consejo de un partido por cada ciudad
-
+// ------------ CONSULTA #3 DADO UN PARTIDO MOSTRAR LAS LISTAS DE CANDIDATOS A CADA UNO DE DIFERENTES LOS CONSEJOS
 void consejo_ciudad(list<Ciudad> multilistaCiudad,string nombre_partido){
     bool c=false;
     cout<<"partido "<<nombre_partido<<"\n";
@@ -77,69 +73,96 @@ void consejo_ciudad(list<Ciudad> multilistaCiudad,string nombre_partido){
                 } 
                 c=true;  
         }
-        
     }
     if(c==false){
           cout<<"la ciudad "<<ciudad.nombre<<" no tiene representantes de este partido"<<"\n";  
         }
         c=false;
-
-}
-}
-
-
-//agregar candidato a alcaldia a una ciudad en un partido (1 candidato por partido, si ya lo tiene lo cambia)
-void agregar_candidato_alcaldia(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {
-    for (auto& ciudad : multilistaCiudad) {
-        if (ciudad.nombre == nombre_ciudad) {
-            for (auto& partido : ciudad.listaPartidosHabilitados) {
-                if (partido.nombre == nombre_partido) {
-                    partido.candidatoAlcaldia = candidato;
-                    guardar(multilistaCiudad);
-                    return;
-                }
-            }
-            cout << "Partido no encontrado";
-            return;
-        }
-    }
-    cout << "Ciudad no encontrada";
+	}
 }
 
-//agregar candidato a consejo a una ciudad en un partido
-
-void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {
-    for (auto& ciudad : multilistaCiudad) {
-        if (ciudad.nombre == nombre_ciudad) {
-            for (auto& partido : ciudad.listaPartidosHabilitados) {
-                if (partido.nombre == nombre_partido) {
-                    partido.listaCandidatosConsejo.push_back(candidato);
-                    guardar(multilistaCiudad);
-                    return;
-                }
-            }
-            cout << "Partido no encontrado";
-            return;
-        }
-    }
-    cout << "Ciudad no encontrada";
+// ------------ CONSULTA #4 DADA UNA CIUDAD MOSTRAR POR CADA PARTIDO EL CANDIDATO A LA ALCALDIA Y LOS CANDIDATOS AL CONSEJO
+void alcaldia_consejo_ciudad(list<Ciudad> multilistaCiudad, string nombreCiudad){
+	bool existe = false;
+	for(const auto& ciudad : multilistaCiudad){
+		if(ciudad.nombre == nombreCiudad){
+			cout << ciudad.nombre << endl;
+			for(const auto& partido : ciudad.listaPartidosHabilitados){
+				cout << "Candidato por el partido: " << partido.nombre << " a Alcaldia: " << partido.candidatoAlcaldia << endl;
+				for(const auto& persona: partido.listaCandidatosConsejo){
+					cout << "-" << persona << endl;
+				}
+			}	
+			existe = true;
+		}	
+	}
+	if(!existe){
+		cout << "la ciudad " << nombreCiudad << " no esta registrada" << endl;
+	}
 }
 
-//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
-
-void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Partido Partido) {
-
-
-    for (auto& ciudad : multilistaCiudad) {
-        if (ciudad.nombre == nombre_ciudad) {
-            ciudad.listaPartidosHabilitados.push_back(Partido);
-            guardar(multilistaCiudad);
-            return;
-        }
-    }
-    cout << "Ciudad no encontrada";
+// ------------ CONSULTA #5 DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS A LA ALCALDIA INCLUYENDO EL VOTO EN BLANCO
+void tarjeton_Ciudad_Alcaldia(list<Ciudad> multilistaCiudad, string nombreCiudad){
+	bool existe = false;
+	int num = 1;
+	for(const auto& ciudad : multilistaCiudad){
+		if(ciudad.nombre == nombreCiudad){
+			cout << "Tarjeton a alcaldia de "<< ciudad.nombre << endl;
+			cout << "0. Voto en Blanco" << endl; 	
+			for(const auto& partido : ciudad.listaPartidosHabilitados){
+				
+				cout << num++ << ". Candidato por el partido " << partido.nombre << endl;
+				cout << "  " << partido.candidatoAlcaldia.nombre << " "<< partido.candidatoAlcaldia.apellido <<endl;
+				
+			}
+			existe = true;
+		}	
+	}
+	if(!existe){
+		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulación" << endl;
+	}
 }
 
-//agregar una ciudad
+// ------------ CONSULTA #6 DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS AL CONSEJO INCLUYENDO EL VOTO EN BLANCO
+void tarjeton_Ciudad_Consejo(list<Ciudad> multilistaCiudad, string nombreCiudad){
+	bool existe = false;
+	int num = 1;
+	for(const auto& ciudad : multilistaCiudad){
+		if(ciudad.nombre == nombreCiudad){
+			cout << "Tarjeton al consejo de "<< ciudad.nombre << endl;
+			cout << "0. Voto en Blanco" << endl; 	
+			for(const auto& partido : ciudad.listaPartidosHabilitados){
+				int num2 = 1;
+				cout << num << ". Candidatos por el partido " << partido.nombre << endl;
+				for(const auto& persona: partido.listaCandidatosConsejo){
+					cout << "  " <<num << "."<< num2++ << " "<< persona.nombre << " "<< persona.apellido <<endl;
+				}
+				num++;
+			}	
+			existe = true;
+		}	
+	}
+	if(!existe){
+		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulación" << endl;
+	}
+}
+
+// ------------ CONSULTA #7 POR CADA CIUDAD MOSTRAR LA CANTIDAD DE PERSONAS HABILITADAS PARA VOTAR
+int censo_Electoral(list<Ciudad> multilistaCiudad){ // Por cada ciudad, mostrara la cantidad de personas habilitadas para votar 
+	int votantes = 0;
+	for(const auto& ciudad : multilistaCiudad){
+		cout << "Censo para " << ciudad.nombre << endl;
+		for(const auto& persona : ciudad.listaHabitantes){
+			cout << persona.nombre << " " << persona.apellido <<", fecha de nacimiento: " << persona.fechaNacimiento <<", Edad: " << calcularEdad(persona.fechaNacimiento) << endl;
+			if(calcularEdad(persona.fechaNacimiento)>18){
+				votantes++;
+			}
+		}	
+		cout << endl;
+	}
+	cout << "Cantidad de personas habilitadas para votar: " << votantes;
+	return votantes;	
+}
+
 
 #endif
