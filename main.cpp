@@ -7,6 +7,7 @@
 #include "Persona.h"
 #include "Archivos.h"
 #include "Consultas.h"
+#include "Simulacion.h"
 
 using namespace std;
 
@@ -43,9 +44,6 @@ int main(int argc, char *argv[]){
 	//guardar(listaCiudades);
 	list<Ciudad> listaLecturaCiudades = leer();
 /*
-	Persona p2("enrique", "larosa", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-	Persona p3("sara", "cardona", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-
 
 	//cambia el candidato a alcaldia de mellado-conservador
 	agregar_candidato_alcaldia(listaLecturaCiudades,"medallo","conservador",p2);
@@ -66,8 +64,7 @@ int main(int argc, char *argv[]){
 	//mostrar candidatos a consejo de un partido por cada ciudad
 	consejo_ciudad(listaLecturaCiudades,"conservador");
 */
-	int x2 = censo_Electoral(listaLecturaCiudades);
-	cout << "+18: "<< x2;
+	simulacion();
 	
 	//menu_principal();
 	

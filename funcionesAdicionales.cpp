@@ -144,6 +144,15 @@ void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Parti
     cout << "Ciudad no encontrada";
 }
 
+int censoParticular(Ciudad ciudad){
+	int votantes = 0;
+	for(const auto& persona : ciudad.listaHabitantes){
+		if(calcularEdad(persona.fechaNacimiento)>18){
+			votantes++;
+		}
+	}
+	return votantes;
+}
 
 
 
