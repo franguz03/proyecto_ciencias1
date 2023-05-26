@@ -14,7 +14,7 @@
 #include "Persona.h"
 #include "Partido.h"
 #include "Archivos.h"
-#include "funcionesAdicionales.cpp"
+#include "funcionesAdicionales.h"
 
 using namespace std;
 
@@ -119,7 +119,7 @@ void tarjeton_Ciudad_Alcaldia(list<Ciudad> multilistaCiudad, string nombreCiudad
 		}	
 	}
 	if(!existe){
-		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulación" << endl;
+		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulaciï¿½n" << endl;
 	}
 }
 
@@ -143,7 +143,7 @@ void tarjeton_Ciudad_Consejo(list<Ciudad> multilistaCiudad, string nombreCiudad)
 		}	
 	}
 	if(!existe){
-		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulación" << endl;
+		cout << "la ciudad " << nombreCiudad << " no esta registrada para la simulaciï¿½n" << endl;
 	}
 }
 

@@ -8,6 +8,7 @@
 #include "Archivos.h"
 #include "Consultas.h"
 #include "Simulacion.h"
+#include "funcionesAdicionales.h"
 
 using namespace std;
 
@@ -64,11 +65,10 @@ int main(int argc, char *argv[]){
 	//mostrar candidatos a consejo de un partido por cada ciudad
 	consejo_ciudad(listaLecturaCiudades,"conservador");
 */
-	simulacion();
 	
 	//menu_principal();
 	
-	
+	simulacion();
     return 0;
 }
 

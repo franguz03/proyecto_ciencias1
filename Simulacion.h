@@ -27,23 +27,29 @@ vector<Persona> generarVotos(vector<Persona> listaCandidatos, int votantes){
 
 void simulacion(){
 	srand(time(0));
-	list<Ciudad> data = leer(); // SE LEE EL ARCHIVO ANTES DE INICIAR LA SIMULACIÓN, POR TANTO CUALQUIER EDICIÓN DEBE GUARDARSE EN EL ARCHIVO PLANO ANTES DE INICIAR LA SIMULACION
+	list<Ciudad> data = leer(); // SE LEE EL ARCHIVO ANTES DE INICIAR LA SIMULACIï¿½N, POR TANTO CUALQUIER EDICIï¿½N DEBE GUARDARSE EN EL ARCHIVO PLANO ANTES DE INICIAR LA SIMULACION
 	for(const auto& ci : data){
 		//POR CADA CIUDAD...
 		vector<Persona> candidatosAlcaldiaCiudad, candidatosConsejoCiudad;
 		int votantes = censoParticular(ci);
-		
+		int posicion=0;
+		int canditadconsejoporpartido[ci.listaPartidosHabilitados.size()];
+		string nombrespartidos [ci.listaPartidosHabilitados.size()];
 		//PARA CADA CIUDAD SE SACAN TODOS LOS CANDIDATOS DE ALCALDIA Y CONSEJO (de todos los partidos) y Se meten en el vector provisional correspondiente para tenerlos a todos juntos y generar los votos que no superen el total del censo
 		for(const auto& partido: ci.listaPartidosHabilitados){ 
+			canditadconsejoporpartido[posicion]=0;
+			nombrespartidos[posicion]=partido.nombre;
 			candidatosAlcaldiaCiudad.push_back(partido.candidatoAlcaldia);
 			for(const auto& persona: partido.listaCandidatosConsejo){
 				candidatosConsejoCiudad.push_back(persona);
+				canditadconsejoporpartido[posicion]++;
 			}
+			posicion++;
 		}
 		
 		Persona p("Blanco", "", 0, 'M', "", "", "", "");
 		Persona p1("Anulado", "", 1, 'M', "", "", "", "");
-		Persona p2("Abstinencia", "", 2, 'M', "", "", "", "");//Se agregan las 3 opciones obligatorias para cada elección como si fuesen un candidato más con su atributo votos
+		Persona p2("Abstinencia", "", 2, 'M', "", "", "", "");//Se agregan las 3 opciones obligatorias para cada elecciï¿½n como si fuesen un candidato mï¿½s con su atributo votos
 		candidatosAlcaldiaCiudad.push_back(p);
 		candidatosAlcaldiaCiudad.push_back(p1);
 		candidatosAlcaldiaCiudad.push_back(p2);
@@ -81,17 +87,38 @@ void simulacion(){
     		candidatosConsejoCiudad.back().votos += votantesRestantes;
 		}
 
-
 		// SE IMPRIMEN LOS REPORTES
-    	cout << "-------- Reporte por: " << ci.nombre << endl << endl << " ALCALDIA:" << endl; 
+    	cout <<"\n"<< "-------- Reporte por: " << ci.nombre << endl << endl << " ALCALDIA:" << endl; 
+
+		int fr=0;
     	for(const auto& persona : candidatosAlcaldiaCiudad){
-    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<endl;
+			if(persona.nombre!="Blanco"&&persona.nombre!="Anulado"&&persona.nombre!="Abstinencia"){
+    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<"-----partido : "<< nombrespartidos[fr]<<endl;
+			fr++;
+			}
+			else{
+				cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<endl;
+			}
 		} 
 		
 		cout << endl; 
 		cout << " CONSEJO:" << endl; 
+		int posicionpartido=0;
+		int cantidad=0;
 		for(const auto& persona : candidatosConsejoCiudad){
-    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<endl;
+			if(persona.nombre!="Blanco"&&persona.nombre!="Anulado"&&persona.nombre!="Abstinencia"){
+			
+    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<"-----partido : "<< nombrespartidos[posicionpartido]<<endl;
+			cantidad++;
+			if(cantidad>=canditadconsejoporpartido[posicionpartido]){
+				posicionpartido++;
+				cantidad=0;
+			}
+			}
+			else{
+				cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<endl;
+
+			}
 		}
 		cout << endl;
 		
