@@ -42,7 +42,7 @@ Persona crearPersona(){
 
 Partido crearPartido(){
     string nombre;
-    cout << "Ingrese nombre: ";
+    cout << "Ingrese nombre del partido: ";
     getline(cin, nombre);
 
     cout<<"ingrese datos del representante";
