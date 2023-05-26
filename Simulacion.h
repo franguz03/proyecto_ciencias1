@@ -29,6 +29,7 @@ void simulacion(){
 	srand(time(0));
 	list<Ciudad> data = leer(); // SE LEE EL ARCHIVO ANTES DE INICIAR LA SIMULACIï¿½N, POR TANTO CUALQUIER EDICIï¿½N DEBE GUARDARSE EN EL ARCHIVO PLANO ANTES DE INICIAR LA SIMULACION
 	for(const auto& ci : data){
+		Persona* ganador = nullptr;
 		//POR CADA CIUDAD...
 		vector<Persona> candidatosAlcaldiaCiudad, candidatosConsejoCiudad;
 		int votantes = censoParticular(ci);
@@ -93,33 +94,40 @@ void simulacion(){
 		int fr=0;
     	for(const auto& persona : candidatosAlcaldiaCiudad){
 			if(persona.nombre!="Blanco"&&persona.nombre!="Anulado"&&persona.nombre!="Abstinencia"){
-    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<"-----partido : "<< nombrespartidos[fr]<<endl;
-			fr++;
+    			cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<"-----partido : "<< nombrespartidos[fr]<<endl;
+				fr++;
+				if (ganador == nullptr || persona.votos > ganador->votos) {
+            		ganador = const_cast<Persona*>(&persona);  // Asignar la dirección de memoria de persona al puntero ganador
+        		}
 			}
 			else{
 				cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<endl;
 			}
 		} 
-		
+		cout << "   GANADOR: " << ganador->nombre << " " << ganador->apellido << ", Votos:" << ganador->votos << ", Porcentaje: " << (static_cast<float>(ganador->votos) * 100)/votantes << "%";
+
+		ganador = nullptr;
 		cout << endl; 
 		cout << " CONSEJO:" << endl; 
 		int posicionpartido=0;
 		int cantidad=0;
 		for(const auto& persona : candidatosConsejoCiudad){
 			if(persona.nombre!="Blanco"&&persona.nombre!="Anulado"&&persona.nombre!="Abstinencia"){
-			
-    		cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<"-----partido : "<< nombrespartidos[posicionpartido]<<endl;
-			cantidad++;
-			if(cantidad>=canditadconsejoporpartido[posicionpartido]){
-				posicionpartido++;
-				cantidad=0;
-			}
+    			cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<"-----partido : "<< nombrespartidos[posicionpartido]<<endl;
+    			if (ganador == nullptr || persona.votos > ganador->votos) {
+            		ganador = const_cast<Persona*>(&persona);  // Asignar la dirección de memoria de persona al puntero ganador
+        		}
+				cantidad++;
+				if(cantidad>=canditadconsejoporpartido[posicionpartido]){
+					posicionpartido++;
+					cantidad=0;
+				}
 			}
 			else{
 				cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<endl;
-
 			}
 		}
+		cout << "   GANADOR: " << ganador->nombre << " " << ganador->apellido << ", Votos:" << ganador->votos << ", Porcentaje: " << (static_cast<float>(ganador->votos) * 100)/votantes << "%";
 		cout << endl;
 		
 		
