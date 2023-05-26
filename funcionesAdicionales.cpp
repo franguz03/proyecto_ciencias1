@@ -2,15 +2,14 @@
 #include <sstream>
 #include <ctime>
 #include <cstdlib>
-#include "Ciudad.h"
-#include "Persona.h"
 #include <iomanip>
 #include <list>
-#include "Archivos.h"
-#include "Consultas.h"
-using namespace std;
 
-//retorna la edad en años en un int (1,2..18)
+#include "Archivos.h"
+#include "Ciudad.h"
+#include "Persona.h"
+
+using namespace std;
 
 Persona crearPersona(){
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;
@@ -35,9 +34,6 @@ Persona crearPersona(){
     cin >> (cin, sexo);
     Persona p(nombre,apellido,identificacion,sexo,estado_civil,ciudad_nacimiento,ciudad_residencia,fechaNacimiento);
     return p;
-
-
-
 }
 
 Partido crearPartido(){
@@ -101,5 +97,63 @@ void menu_principal(){
 
 
     }
-
 }
+
+void agregar_candidato_alcaldia(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {//agregar candidato a alcaldia a una ciudad en un partido (1 candidato por partido, si ya lo tiene lo cambia)
+    for (auto& ciudad : multilistaCiudad) {
+        if (ciudad.nombre == nombre_ciudad) {
+            for (auto& partido : ciudad.listaPartidosHabilitados) {
+                if (partido.nombre == nombre_partido) {
+                    partido.candidatoAlcaldia = candidato;
+                    guardar(multilistaCiudad);
+                    return;
+                }
+            }
+            cout << "Partido no encontrado";
+            return;
+        }
+    }
+    cout << "Ciudad no encontrada";
+}
+
+void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {//agregar candidato a consejo a una ciudad en un partido
+    for (auto& ciudad : multilistaCiudad) {
+        if (ciudad.nombre == nombre_ciudad) {
+            for (auto& partido : ciudad.listaPartidosHabilitados) {
+                if (partido.nombre == nombre_partido) {
+                    partido.listaCandidatosConsejo.push_back(candidato);
+                    guardar(multilistaCiudad);
+                    return;
+                }
+            }
+            cout << "Partido no encontrado";
+            return;
+        }
+    }
+    cout << "Ciudad no encontrada";
+}
+
+void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Partido Partido) {//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
+    for (auto& ciudad : multilistaCiudad) {
+        if (ciudad.nombre == nombre_ciudad) {
+            ciudad.listaPartidosHabilitados.push_back(Partido);
+            guardar(multilistaCiudad);
+            return;
+        }
+    }
+    cout << "Ciudad no encontrada";
+}
+
+int censoParticular(Ciudad ciudad){
+	int votantes = 0;
+	for(const auto& persona : ciudad.listaHabitantes){
+		if(calcularEdad(persona.fechaNacimiento)>18){
+			votantes++;
+		}
+	}
+	return votantes;
+}
+
+
+
+

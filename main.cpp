@@ -1,19 +1,20 @@
 #include <cstdlib>
 #include <iostream>
-#include "Ciudad.h"
-#include "Persona.h"
 #include <iomanip>
 #include <list>
+
+#include "Ciudad.h"
+#include "Persona.h"
 #include "Archivos.h"
 #include "Consultas.h"
-#include "funcionesAdicionales.cpp"
+#include "Simulacion.h"
 
 using namespace std;
 
 
 int main(int argc, char *argv[]){
 	
-	/*
+	
 	Persona p("Juan", "Perez", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
 	Persona x("Pedro", "garzon", 123456789, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
 	Partido partido1("conservador",p,p);
@@ -40,12 +41,9 @@ int main(int argc, char *argv[]){
 	listaCiudades.push_back(c1);
 	listaCiudades.push_back(c2);
 	
-	guardar(listaCiudades);
+	//guardar(listaCiudades);
 	list<Ciudad> listaLecturaCiudades = leer();
-
-	Persona p2("enrique", "larosa", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-	Persona p3("sara", "cardona", 12345689, 'M', "Soltero", "Medellin", "Bogota", "10/08/2020");
-
+/*
 
 	//cambia el candidato a alcaldia de mellado-conservador
 	agregar_candidato_alcaldia(listaLecturaCiudades,"medallo","conservador",p2);
@@ -66,8 +64,10 @@ int main(int argc, char *argv[]){
 	//mostrar candidatos a consejo de un partido por cada ciudad
 	consejo_ciudad(listaLecturaCiudades,"conservador");
 */
-
-	menu_principal();
+	simulacion();
+	
+	//menu_principal();
+	
 	
     return 0;
 }
