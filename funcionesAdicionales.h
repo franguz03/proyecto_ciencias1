@@ -253,6 +253,33 @@ void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciu
     cout << "Ciudad no encontrada";
 }
 
+void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, string nombre_candidato) {
+    for (auto& ciudad : multilistaCiudad) {
+        if (ciudad.nombre == nombre_ciudad) {
+            for (auto& partido : ciudad.listaPartidosHabilitados) {
+                if (partido.nombre == nombre_partido) {
+                    auto it = std::find_if(partido.listaCandidatosConsejo.begin(), partido.listaCandidatosConsejo.end(), [&nombre_candidato](const Persona& candidato) {
+                        return candidato.nombre == nombre_candidato;
+                    });
+
+                    if (it != partido.listaCandidatosConsejo.end()) {
+                        partido.listaCandidatosConsejo.erase(it);
+                        guardar(multilistaCiudad);
+                        // No es necesario el return en una función void
+                    } else {
+                        cout << "Candidato no encontrado en el partido" << endl;
+                        // No es necesario el return en una función void
+                    }
+                }
+            }
+            cout << "Partido no encontrado en la ciudad" << endl;
+            // No es necesario el return en una función void
+        }
+    }
+    cout << "Ciudad no encontrada" << endl;
+    // No es necesario el return en una función void
+}
+
 void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Partido Partido) {//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
@@ -262,6 +289,42 @@ void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Parti
         }
     }
     cout << "Ciudad no encontrada";
+}
+
+void eliminar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido) {
+    for (auto& ciudad : multilistaCiudad) {
+        if (ciudad.nombre == nombre_ciudad) {
+            auto it = std::find_if(ciudad.listaPartidosHabilitados.begin(), ciudad.listaPartidosHabilitados.end(), [&nombre_partido](const Partido& partido) {
+                return partido.nombre == nombre_partido;
+            });
+
+            if (it != ciudad.listaPartidosHabilitados.end()) {
+                ciudad.listaPartidosHabilitados.erase(it);
+                guardar(multilistaCiudad);
+                return;
+            } else {
+                cout << "Partido no encontrado en la ciudad" << endl;
+                return;
+            }
+        }
+    }
+    cout << "Ciudad no encontrada" << endl;
+}
+
+void agregar_ciudad(list<Ciudad>& multilistaCiudad, const Ciudad& nuevaCiudad) {
+    multilistaCiudad.push_back(nuevaCiudad);
+}
+
+void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad) {
+    auto it = std::find_if(multilistaCiudad.begin(), multilistaCiudad.end(), [&nombreCiudad](const Ciudad& ciudad) {
+        return ciudad.nombre == nombreCiudad;
+    });
+    
+    if (it != multilistaCiudad.end()) {
+        multilistaCiudad.erase(it);
+    } else {
+        cout << "Ciudad no encontrada" << endl;
+    }
 }
 
 int censoParticular(Ciudad ciudad){
