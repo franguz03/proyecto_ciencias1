@@ -83,7 +83,7 @@ int main(int argc, char *argv[]){
 	
 	//menu_principal();
 	
-	//simulacion();
+	simulacion();
     return 0;
 }
 

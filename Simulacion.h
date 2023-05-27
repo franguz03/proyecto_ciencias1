@@ -27,10 +27,75 @@ vector<Persona> generarVotos(vector<Persona> listaCandidatos, int votantes){
 		}
 }
 
+void estadisticas(list<Ciudad> listaCiudades){
+	cout << endl << endl << "-----------------------------------  ESTADISTICAS  -----------------------------------"<< endl << endl;
+	struct aux{
+		string nombre;
+		int TotalNacional = 0, TotalNacionalF = 0, TotalNacionalM = 0;
+		
+		aux(const string& nom) : nombre(nom) {}
+	};
+	int poblacionNacional = 0;
+	vector<aux> partidos;
+	for(const auto& ciudad : listaCiudades){
+		int votantes = censoParticular(ciudad);
+		poblacionNacional += votantes;
+		cout << ciudad.nombre << ": " << endl;
+		for(auto& partido : ciudad.listaPartidosHabilitados){
+			string nom = partido.nombre;  
+			auto it = std::find_if(partidos.begin(), partidos.end(), [&partido, &nom](aux& a) {
+        		nom = a.nombre;
+				return a.nombre == partido.nombre;
+    		});
+    		if (it != partidos.end()) {
+    				for(auto& persona : partido.listaCandidatosConsejo){
+						it->TotalNacional += persona.votos;
+						if(persona.sexo == 'F'){
+							it->TotalNacionalF += persona.votos;
+						}else{
+							it->TotalNacionalM += persona.votos;
+						}
+					}
+    		} else {
+        		aux nuevoAux{partido.nombre};
+        		for(auto& persona : partido.listaCandidatosConsejo){
+						nuevoAux.TotalNacional += persona.votos;
+						if(persona.sexo == 'F'){
+							nuevoAux.TotalNacionalF += persona.votos;
+						}else{
+							nuevoAux.TotalNacionalM += persona.votos;
+						}
+					}
+        		partidos.push_back(nuevoAux);
+    		}
+			
+			int totalPartido = 0, totalM = 0, totalF = 0;
+			cout << " - " << partido.nombre << ": ";
+			for(auto& persona : partido.listaCandidatosConsejo){
+				totalPartido += persona.votos;
+				if(persona.sexo == 'F'){
+					totalF += persona.votos;
+				}else{
+					totalM += persona.votos;
+				}
+			}
+			cout << "Total votos: " << totalPartido << "/" << (static_cast<float>(totalPartido) * 100) / votantes << "%, ";
+			cout << "Total M: " << totalM << "/" << (static_cast<float>(totalM) * 100) / votantes << "%, ";
+			cout << "Total M: " << totalF << "/" << (static_cast<float>(totalF) * 100) / votantes << "%" << endl;
+		}
+	}cout << endl << endl << "-----------------------------------  ESTADISTICA NACIONAL -----------------------------------" << endl << endl;
+		for (const auto& partido : partidos) {
+        	cout << "Nombre: " << partido.nombre << std::endl;
+        	cout << "Total votos: " << partido.TotalNacional << "/" << (static_cast<float>(partido.TotalNacional) * 100) / poblacionNacional << "%, ";
+			cout << "Total M: " << partido.TotalNacionalM << "/" << (static_cast<float>(partido.TotalNacionalM) * 100) / poblacionNacional << "%, ";
+			cout << "Total M: " << partido.TotalNacionalF << "/" << (static_cast<float>(partido.TotalNacionalF) * 100) / poblacionNacional << "%" << endl;
+    	}	
+}
+
 void simulacion(){
 	srand(time(0));
-	list<Ciudad> data = leer(); // SE LEE EL ARCHIVO ANTES DE INICIAR LA SIMULACI�N, POR TANTO CUALQUIER EDICI�N DEBE GUARDARSE EN EL ARCHIVO PLANO ANTES DE INICIAR LA SIMULACION
-	for(const auto& ci : data){
+	list<Ciudad> data = leer();
+	for( auto& ci : data){
 		Persona* ganador = nullptr;
 		//POR CADA CIUDAD...
 		vector<Persona> candidatosAlcaldiaCiudad, candidatosConsejoCiudad;
@@ -131,11 +196,26 @@ void simulacion(){
 		}
 		cout << "   GANADOR: " << ganador->nombre << " " << ganador->apellido << ", Votos:" << ganador->votos << ", Porcentaje: " << (static_cast<float>(ganador->votos) * 100)/votantes << "%";
 		cout << endl;
-		
-		
+		int counter = 0;
+		int i = 0;
+		for(auto& partido: ci.listaPartidosHabilitados){// ASIGNA los votos a cada candidato en la lista original
+			if(partido.candidatoAlcaldia.identificacion == candidatosAlcaldiaCiudad[counter].identificacion){
+				partido.candidatoAlcaldia.votos = candidatosAlcaldiaCiudad[counter].votos;
+			}
+			for(auto& persona: partido.listaCandidatosConsejo){
+				if(persona.identificacion == candidatosConsejoCiudad[i].identificacion){
+					persona.votos = candidatosConsejoCiudad[i].votos;
+				}
+				i++;
+			}
+			counter++;
+		}
 	}
-	//guardar(data);
+	estadisticas(data);
+	guardar(data);	
 }
+
+
 #endif
 
 
