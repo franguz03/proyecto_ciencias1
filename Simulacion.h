@@ -1,3 +1,5 @@
+#ifndef SIMULACION_H
+#define SIMULACION_H
 #include <iostream>
 #include <sstream>
 #include <ctime>
@@ -134,6 +136,6 @@ void simulacion(){
 	}
 	//guardar(data);
 }
-
+#endif
 
 

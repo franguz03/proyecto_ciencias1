@@ -6,7 +6,6 @@
 #include "Ciudad.h"
 #include "Persona.h"
 #include "Archivos.h"
-#include "Consultas.h"
 #include "Simulacion.h"
 #include "funcionesAdicionales.h"
 
@@ -44,7 +43,23 @@ int main(int argc, char *argv[]){
 	
 	//guardar(listaCiudades);
 	list<Ciudad> listaLecturaCiudades = leer();
-/*
+	
+	
+/*for (auto& ciudad : listaLecturaCiudades) {
+		ordenarPorIdentificacion(ciudad.listaHabitantes);
+		for(auto& persona: ciudad.listaHabitantes){
+			cout << "Nombre: " << persona.nombre << ", Identificacion: " << persona.identificacion << endl;
+		}
+		eliminarPorIdentificacion(ciudad.listaHabitantes, 639814725);	
+	}
+	cout << "------------" << endl;
+	for (auto& ciudad : listaLecturaCiudades) {
+		ordenarPorIdentificacion(ciudad.listaHabitantes);
+		for(auto& persona: ciudad.listaHabitantes){
+			cout << "Nombre: " << persona.nombre << ", Identificacion: " << persona.identificacion << endl;
+		}
+	}
+	guardar(listaLecturaCiudades);
 
 	//cambia el candidato a alcaldia de mellado-conservador
 	agregar_candidato_alcaldia(listaLecturaCiudades,"medallo","conservador",p2);
@@ -68,7 +83,7 @@ int main(int argc, char *argv[]){
 	
 	//menu_principal();
 	
-	simulacion();
+	//simulacion();
     return 0;
 }
 

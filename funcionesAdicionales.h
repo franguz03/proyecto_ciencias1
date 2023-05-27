@@ -11,10 +11,26 @@
 #include "Archivos.h"
 #include "Ciudad.h"
 #include "Persona.h"
-#include "Consultas.h"
+
 
 using namespace std;
+void ordenarPorIdentificacion(list<Persona>& listaPersonas) {
+    listaPersonas.sort();
+}
 
+void agregarPersonaOrdenada(list<Persona>& listaPersonas, const Persona& nuevaPersona) {
+    auto it = lower_bound(listaPersonas.begin(), listaPersonas.end(), nuevaPersona);
+    listaPersonas.insert(it, nuevaPersona);
+}
+
+bool eliminarPorIdentificacion(list<Persona>& listaPersonas, long int identificacion) {
+    auto it = lower_bound(listaPersonas.begin(), listaPersonas.end(), Persona{"","", identificacion,'x',"","","",""});
+    if (it != listaPersonas.end() && it->identificacion == identificacion) {
+        listaPersonas.erase(it);
+        return true;
+    }
+    return false;
+}
 /*
 void menu_principal(){
     list<Ciudad> listaLecturaCiudades = leer();

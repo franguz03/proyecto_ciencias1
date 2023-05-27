@@ -1,25 +1,24 @@
 medallo,antioquia,2
  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1920
  Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2000
- Maria,Gomez,Casada,Bogota,Medellin,987654321,F,15/02/1985
- Pedro,Lopez,Soltero,Cali,Cartagena,246813579,M,25/11/1990
  Ana,Hernandez,Divorciada,Barranquilla,Pereira,135792468,F,03/06/1978
- Luis,Rodriguez,Soltero,Medellin,Bogota,864209753,M,19/09/2000
- Carolina,Mendoza,Casada,Cartagena,Bogota,987654321,F,18/07/1992
- Andrés,García,Soltero,Medellin,Cali,246813579,M,05/04/1988 
  Gabriela,Torres,Soltera,Cali,Pereira,135792468,F,12/03/1995
- Alejandro,Ramírez,Divorciado,Bogota,Barranquilla,864209753,M,29/11/1980
- Valentina,Santos,Soltera,Barranquilla,Medellin,753086421,F,08/09/1998
- Francisco,Vargas,Casado,Bogota,Cartagena,369852147,M,14/02/1984
- Natalia,Jaramillo,Soltera,Medellin,Cali,258741369,F,21/06/1990
  Sebastián,Ortiz,Soltero,Cartagena,Bogota,147852369,M,02/05/1986
- Camila,López,Casada,Cali,Pereira,639814725,F,27/10/1993
- Diego,Rojas,Soltero,Barranquilla,Medellin,918273645,M,09/12/1982
- Sofía,Pérez,Soltera,Medellin,Bogota,572461983,F,26/08/1999
- Gabriel,Torres,Casado,Bogota,Cali,368572194,M,03/03/1987
+ Pedro,Lopez,Soltero,Cali,Cartagena,246813579,M,25/11/1990
+ Andrés,García,Soltero,Medellin,Cali,246813579,M,05/04/1988 
  Isabella,Hernández,Soltera,Cali,Cartagena,257493186,F,11/07/1994
- Julián,González,Soltero,Barranquilla,Pereira,846192573,M,28/04/1981
+ Natalia,Jaramillo,Soltera,Medellin,Cali,258741369,F,21/06/1990
+ Gabriel,Torres,Casado,Bogota,Cali,368572194,M,03/03/1987
+ Francisco,Vargas,Casado,Bogota,Cartagena,369852147,M,14/02/1984
+ Sofía,Pérez,Soltera,Medellin,Bogota,572461983,F,26/08/1999
  Valeria,Martínez,Soltera,Medellin,Bogota,716839425,F,15/01/1997
+ Valentina,Santos,Soltera,Barranquilla,Medellin,753086421,F,08/09/1998
+ Julián,González,Soltero,Barranquilla,Pereira,846192573,M,28/04/1981
+ Luis,Rodriguez,Soltero,Medellin,Bogota,864209753,M,19/09/2000
+ Alejandro,Ramírez,Divorciado,Bogota,Barranquilla,864209753,M,29/11/1980
+ Diego,Rojas,Soltero,Barranquilla,Medellin,918273645,M,09/12/1982
+ Maria,Gomez,Casada,Bogota,Medellin,987654321,F,15/02/1985
+ Carolina,Mendoza,Casada,Cartagena,Bogota,987654321,F,18/07/1992
 
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-enrique,larosa,Soltero,Medellin,Bogota,12345689,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
