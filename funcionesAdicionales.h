@@ -11,152 +11,28 @@
 #include "Archivos.h"
 #include "Ciudad.h"
 #include "Persona.h"
+#include "Consultas.h"
 
 
 using namespace std;
-/*
-void menu_principal(){
-    list<Ciudad> listaLecturaCiudades = leer();
-    cout<<"programa de simulacion"<<"\n";
-    cout<<"1. modificar datos"<<"\n"<<"2. consultar datos"<<"\n"<<"3. simular votaciones"<<"\n";
-    int opcion;
-    cout<<"ingrese su opcion: ";
-    cin>>opcion;
-    switch (opcion) {
-
-        case 1:
-        cout<<"ingrese ciudad: ";
-            menu_modificacioines(listaLecturaCiudades);
-            menu_principal();
-        case 2:
-            menu_consultas(listaLecturaCiudades);
-            menu_principal();
-        case 3:
-            simulacion();
-            menu_principal();
-        default:
-            std::cout << "OpciÃ³n invÃ¡lida" << std::endl;
-            menu_principal();
-       
 
 
-    }
-}
-
-
-void menu_consultas(list<Ciudad> multilistaCiudad){
-    cout<<"1. DADO UN PARTIDO Y UNA CIUDAD MOSTRAR LA LISTA DE SUS CANDIDATOS AL CONSEJO Y EL CANDIDATO A LA ALCALDIA"<<"\n"<<"2. DADO UN PARTIDO MOSTRAR LA LISTA DE CANDIDATOS A ALCALDIAS DE CADA UNA DE LAS DIFERENTES CIUDADES"<<"\n"<<"3. DADO UN PARTIDO MOSTRAR LAS LISTAS DE CANDIDATOS A CADA UNO DE DIFERENTES LOS CONSEJOS"<<"\n"<<"4. DADA UNA CIUDAD MOSTRAR POR CADA PARTIDO EL CANDIDATO A LA ALCALDIA Y LOS CANDIDATOS AL CONSEJO"<<"\n"<<"5. DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS A LA ALCALDIA INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"6.  DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS AL CONSEJO INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"7.  POR CADA CIUDAD MOSTRAR LA CANTIDAD DE PERSONAS HABILITADAS PARA VOTAR"<<"\n"<<"8. Volver atras"<<"\n";
-    int opcion;
-    cin>>opcion;
-    string ciudad;
-    string partido;
-    switch (opcion)
-    {
-    case 1:
-        cout << "Introduce la partido: ";
-        getline(std::cin, partido);
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        candidatos_ciudad_partido(multilistaCiudad,ciudad,partido);
-        menu_consultas(multilistaCiudad);
-
-    case 2:
-        cout << "Introduce la partido: ";
-        getline(std::cin, partido);
-        alcaldia_ciudad(multilistaCiudad,partido);
-        menu_consultas(multilistaCiudad);
-
-    case 3:
-        cout << "Introduce la partido: ";
-        getline(std::cin, partido);
-        consejo_ciudad(multilistaCiudad,partido);
-        menu_consultas(multilistaCiudad);
-    
-    case 4:
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        alcaldia_consejo_ciudad(multilistaCiudad,ciudad);
-        menu_consultas(multilistaCiudad);
-
-    case 5:
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        tarjeton_Ciudad_Alcaldia(multilistaCiudad,ciudad);
-        menu_consultas(multilistaCiudad);
-
-    case 6:
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        tarjeton_Ciudad_Consejo(multilistaCiudad,ciudad);
-        menu_consultas(multilistaCiudad);
-
-    case 7:
-        censo_Electoral(multilistaCiudad);
-        menu_consultas(multilistaCiudad);
-
-    case 8:
-        menu_principal();
-
-    default:
-        cout<<"opcioin no valida";
-        menu_consultas(multilistaCiudad);
-        
-    }
-}
-
-void menu_modificacioines(list<Ciudad> multilistaCiudad){
-
-    cout<<"1. AGREGAR UN CANDIDATO-ALCALDIA SEGUN CIUDAD Y PARTIDO"<<"\n"<<"2. AGREGAR UN CANDIDATO-CONSEJO SEGUN CIUDAD Y PARTIDO"<<"\n"<<"3. AGREGAR UN PARTIDO SEGUN CIUDAD"<<"\n";
-    int opcion;
-    cin>>opcion;
-    string ciudad;
-    string partido;
-    switch (opcion)
-    {
-    case 1:
-        cout << "Introduce la partido: ";
-        getline(std::cin, partido);
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        agregar_candidato_alcaldia(multilistaCiudad,ciudad,partido,crearPersona());
-        menu_modificacioines(multilistaCiudad);
-    case 2:
-        cout << "Introduce la partido: ";
-        getline(std::cin, partido);
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        agregar_candidato_consejo(multilistaCiudad,ciudad,partido,crearPersona());
-        menu_modificacioines(multilistaCiudad);
-    case 3:
-        cout << "Introduce la ciudad: ";
-        getline(std::cin, ciudad);
-        agregar_partido(multilistaCiudad,ciudad,crearPartido());
-        menu_modificacioines(multilistaCiudad);
-    
-    default:
-        cout<<"opcion no valida";
-        menu_modificacioines(multilistaCiudad);
-    }
-
-
-}*/
 Persona crearPersona(){
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;
     long int identificacion;
     char sexo;
-
     cout << "Ingrese nombre: ";
-    getline(cin, nombre);
+    cin>>nombre;
     cout << "Ingrese apellido: ";
-    getline(cin, apellido);
+    cin>>apellido;
     cout << "Ingrese estado civil: ";
-    getline(cin, estado_civil);
+    cin>>estado_civil;
     cout << "Ingrese ciudad de nacimiento: ";
-    getline(cin, ciudad_nacimiento);
+    cin>>ciudad_nacimiento;
     cout << "Ingrese ciudad de residencia: ";
-    getline(cin, ciudad_residencia);
+    cin>>ciudad_residencia;
     cout << "Ingrese fecha de nacimiento (dd/mm/aaaa): ";
-    getline(cin, fechaNacimiento);
+    cin>>fechaNacimiento;
     cout << "Ingrese identificacion: ";
     cin >> identificacion;
     cout << "ingrese sexo (M/F)";
@@ -168,15 +44,28 @@ Persona crearPersona(){
 Partido crearPartido(){
     string nombre;
     cout << "Ingrese nombre del partido: ";
-    getline(cin, nombre);
+    cin>>nombre;
 
-    cout<<"ingrese datos del representante";
+    cout<<"ingrese datos del representante"<<"\n";
     Persona representante= crearPersona();
 
-    cout<<"ingrese datos del candidato";
+    cout<<"ingrese datos del candidato-alcaldia"<<"\n";
     Persona representantealcaldia= crearPersona();
 
     return Partido(nombre,representante,representantealcaldia);
+}
+
+Ciudad crearCiudad(){
+    string nombre, departamento;
+    int tamanioConsejo; 
+    cout << "Ingrese nombre: ";
+    cin>>nombre;
+    cout << "Ingrese departamento: ";
+    cin>>departamento;
+    cout << "Ingrese tamaÃ±o del consejo: ";
+    cin>>tamanioConsejo;
+
+    return Ciudad(nombre,departamento,tamanioConsejo);
 }
 
 int calcularEdad(const std::string& fechaNacimiento) {
@@ -219,12 +108,13 @@ bool eliminarPorIdentificacion(list<Persona>& listaPersonas, long int identifica
     return false;
 }
 
-void agregar_candidato_alcaldia(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {//agregar candidato a alcaldia a una ciudad en un partido (1 candidato por partido, si ya lo tiene lo cambia)
+void agregar_candidato_alcaldia(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido) {//agregar candidato a alcaldia a una ciudad en un partido (1 candidato por partido, si ya lo tiene lo cambia)
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             for (auto& partido : ciudad.listaPartidosHabilitados) {
                 if (partido.nombre == nombre_partido) {
-                    partido.candidatoAlcaldia = candidato;
+                    cout<<"Ingrese los datos del candidato------"<<"\n";
+                    partido.candidatoAlcaldia = crearPersona();
                     guardar(multilistaCiudad);
                     return;
                 }
@@ -236,12 +126,13 @@ void agregar_candidato_alcaldia(list<Ciudad>& multilistaCiudad, string nombre_ci
     cout << "Ciudad no encontrada";
 }
 
-void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, Persona candidato) {//agregar candidato a consejo a una ciudad en un partido
+void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido) {//agregar candidato a consejo a una ciudad en un partido
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             for (auto& partido : ciudad.listaPartidosHabilitados) {
                 if (partido.nombre == nombre_partido) {
-                    partido.listaCandidatosConsejo.push_back(candidato);
+                    cout<<"Ingrese los datos del candidato------"<<"\n";
+                    partido.listaCandidatosConsejo.push_back(crearPersona());
                     guardar(multilistaCiudad);
                     return;
                 }
@@ -265,25 +156,26 @@ void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ci
                     if (it != partido.listaCandidatosConsejo.end()) {
                         partido.listaCandidatosConsejo.erase(it);
                         guardar(multilistaCiudad);
-                        // No es necesario el return en una función void
+                        // No es necesario el return en una funciï¿½n void
                     } else {
                         cout << "Candidato no encontrado en el partido" << endl;
-                        // No es necesario el return en una función void
+                        // No es necesario el return en una funciï¿½n void
                     }
                 }
             }
             cout << "Partido no encontrado en la ciudad" << endl;
-            // No es necesario el return en una función void
+            // No es necesario el return en una funciï¿½n void
         }
     }
     cout << "Ciudad no encontrada" << endl;
-    // No es necesario el return en una función void
+    // No es necesario el return en una funciï¿½n void
 }
 
-void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, Partido Partido) {//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
+void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad) {//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
-            ciudad.listaPartidosHabilitados.push_back(Partido);
+            cout<<"Ingrese los datos del partido------"<<"\n";
+            ciudad.listaPartidosHabilitados.push_back(crearPartido());
             guardar(multilistaCiudad);
             return;
         }
@@ -303,16 +195,18 @@ void eliminar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, stri
                 guardar(multilistaCiudad);
                 return;
             } else {
-                cout << "Partido no encontrado en la ciudad" << endl;
+                cout << "Partido no encontrado en la ciudad" << "\n";
                 return;
             }
         }
     }
-    cout << "Ciudad no encontrada" << endl;
+    cout << "Ciudad no encontrada" << "\n";
 }
 
-void agregar_ciudad(list<Ciudad>& multilistaCiudad, const Ciudad& nuevaCiudad) {
-    multilistaCiudad.push_back(nuevaCiudad);
+void agregar_ciudad(list<Ciudad>& multilistaCiudad) {
+    cout<<"Ingrese los datos de la ciudad------"<<"\n";
+    multilistaCiudad.push_back(crearCiudad());
+    guardar(multilistaCiudad);
 }
 
 void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad) {
@@ -322,6 +216,7 @@ void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad)
     
     if (it != multilistaCiudad.end()) {
         multilistaCiudad.erase(it);
+        guardar(multilistaCiudad);
     } else {
         cout << "Ciudad no encontrada" << endl;
     }
@@ -336,6 +231,7 @@ int censoParticular(Ciudad ciudad){
 	}
 	return votantes;
 }
+
 #endif
 
 

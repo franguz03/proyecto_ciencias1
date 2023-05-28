@@ -79,16 +79,16 @@ void estadisticas(list<Ciudad> listaCiudades){
 					totalM += persona.votos;
 				}
 			}
-			cout << "Total votos: " << totalPartido << "/" << (static_cast<float>(totalPartido) * 100) / votantes << "%, ";
-			cout << "Total M: " << totalM << "/" << (static_cast<float>(totalM) * 100) / votantes << "%, ";
-			cout << "Total M: " << totalF << "/" << (static_cast<float>(totalF) * 100) / votantes << "%" << endl;
+			cout << "Total votos: " << totalPartido << " / " << (static_cast<float>(totalPartido) * 100) / votantes << "%, ";
+			cout << "Total M: " << totalM << " -> " << (static_cast<float>(totalM) * 100) / votantes << "%, ";
+			cout << "Total F: " << totalF << " -> " << (static_cast<float>(totalF) * 100) / votantes << "%" << endl;
 		}
 	}cout << endl << endl << "-----------------------------------  ESTADISTICA NACIONAL -----------------------------------" << endl << endl;
 		for (const auto& partido : partidos) {
         	cout << "Nombre: " << partido.nombre << std::endl;
-        	cout << "Total votos: " << partido.TotalNacional << "/" << (static_cast<float>(partido.TotalNacional) * 100) / poblacionNacional << "%, ";
-			cout << "Total M: " << partido.TotalNacionalM << "/" << (static_cast<float>(partido.TotalNacionalM) * 100) / poblacionNacional << "%, ";
-			cout << "Total M: " << partido.TotalNacionalF << "/" << (static_cast<float>(partido.TotalNacionalF) * 100) / poblacionNacional << "%" << endl;
+        	cout << "Total votos: " << partido.TotalNacional << " -> " << (static_cast<float>(partido.TotalNacional) * 100) / poblacionNacional << "%, ";
+			cout << "Total M: " << partido.TotalNacionalM << " -> " << (static_cast<float>(partido.TotalNacionalM) * 100) / poblacionNacional << "%, ";
+			cout << "Total F: " << partido.TotalNacionalF << " -> " << (static_cast<float>(partido.TotalNacionalF) * 100) / poblacionNacional << "%" << endl;
     	}	
 }
 
@@ -164,7 +164,7 @@ void simulacion(){
     			cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%"<<"-----partido : "<< nombrespartidos[fr]<<endl;
 				fr++;
 				if (ganador == nullptr || persona.votos > ganador->votos) {
-            		ganador = const_cast<Persona*>(&persona);  // Asignar la dirección de memoria de persona al puntero ganador
+            		ganador = const_cast<Persona*>(&persona);  // Asignar la direcciï¿½n de memoria de persona al puntero ganador
         		}
 			}
 			else{
@@ -182,7 +182,7 @@ void simulacion(){
 			if(persona.nombre!="Blanco"&&persona.nombre!="Anulado"&&persona.nombre!="Abstinencia"){
     			cout << "   " << persona.nombre << ", Votos:" << persona.votos << ", Porcentaje: " << (static_cast<float>(persona.votos) * 100) / votantes << "%" <<"-----partido : "<< nombrespartidos[posicionpartido]<<endl;
     			if (ganador == nullptr || persona.votos > ganador->votos) {
-            		ganador = const_cast<Persona*>(&persona);  // Asignar la dirección de memoria de persona al puntero ganador
+            		ganador = const_cast<Persona*>(&persona);  // Asignar la direcciï¿½n de memoria de persona al puntero ganador
         		}
 				cantidad++;
 				if(cantidad>=canditadconsejoporpartido[posicionpartido]){

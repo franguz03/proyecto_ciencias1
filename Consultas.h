@@ -88,7 +88,8 @@ void alcaldia_consejo_ciudad(list<Ciudad> multilistaCiudad, string nombreCiudad)
 		if(ciudad.nombre == nombreCiudad){
 			cout << ciudad.nombre << endl;
 			for(const auto& partido : ciudad.listaPartidosHabilitados){
-				cout << "Candidato por el partido: " << partido.nombre << " a Alcaldia: " << partido.candidatoAlcaldia << endl;
+				cout << "Candidato por el partido " << partido.nombre << " a Alcaldia: " << partido.candidatoAlcaldia << endl;
+				cout<<"	lista de consejo: "<<"\n";
 				for(const auto& persona: partido.listaCandidatosConsejo){
 					cout << "-" << persona << endl;
 				}
