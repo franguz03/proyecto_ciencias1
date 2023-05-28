@@ -23,7 +23,6 @@ medallo,antioquia,2
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Mariano,Silva,Soltero,Cartagena,Bogota,26581934,M,28/07/1988
    Javier,Luna,Casado,Medellin,Barranquilla,42981376,M,17/11/1983
    Fernanda,Acosta,Divorciado,Bogota,Cali,53792184,F,25/03/1975
-   pepe,sierra,sad,tunja,medallo,121212,M,22/03/2000
 
   liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Raul,Contreras,Unión libre,Barranquilla,Medellin,79163842,M,11/09/1997
    Carla,Paredes,Casado,Medellin,Cali,48273951,F,09/12/1979
@@ -42,6 +41,3 @@ bogota,cundinamarca,2
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
 
-tunja,boyaca,2
-
-  conservador-kun,aguero,sad,bogo,bogo,1212,M,22/07/1990-carmen,lozano,sad,22/07/1990,bogo,34,F,22/07/1990

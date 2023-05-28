@@ -14,8 +14,8 @@ using namespace std;
 void menu_consultas(list<Ciudad> multilistaCiudad);
 void menu_principal();
 void menu_modificacioines(list<Ciudad> multilistaCiudad);
-int main(int argc, char *argv[]){
 
+int main(int argc, char *argv[]){
 	menu_principal();
 	//simulacion();
     return 0;

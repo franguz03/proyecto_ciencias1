@@ -16,7 +16,7 @@
 
 using namespace std;
 
-
+E
 Persona crearPersona(){
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;
     long int identificacion;
@@ -156,19 +156,18 @@ void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ci
                     if (it != partido.listaCandidatosConsejo.end()) {
                         partido.listaCandidatosConsejo.erase(it);
                         guardar(multilistaCiudad);
-                        // No es necesario el return en una funci�n void
+                        return;
                     } else {
                         cout << "Candidato no encontrado en el partido" << endl;
-                        // No es necesario el return en una funci�n void
+                        return;
                     }
                 }
             }
             cout << "Partido no encontrado en la ciudad" << endl;
-            // No es necesario el return en una funci�n void
+            return;
         }
     }
     cout << "Ciudad no encontrada" << endl;
-    // No es necesario el return en una funci�n void
 }
 
 void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad) {//agregar un partido en una ciudad (las ciudades tienen partidos habilitados)
