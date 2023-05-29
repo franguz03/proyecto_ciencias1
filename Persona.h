@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct Persona 
+struct Persona //estructura basica para representar habitantes y candidatos
 {
     //Atributos inicializados
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;

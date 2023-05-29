@@ -9,7 +9,7 @@
 
 using namespace std;
 
-struct Partido{
+struct Partido{// cintiene la lista de candidatos a es partido (por ciudad) y el candidato-alcaldia (1 por partido por cada ciudad)- obligatorio
     //Atributos inicializados
 	string nombre;
 	Persona representanteLegal;

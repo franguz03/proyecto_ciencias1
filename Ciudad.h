@@ -11,7 +11,7 @@
 
 using namespace std;
  
-struct Ciudad
+struct Ciudad//estructura basica que almacena los habitantes y los partidos habilitados y presentes de la misma 
 {
     //Atributos Inicializados
     string nombre, departamento;

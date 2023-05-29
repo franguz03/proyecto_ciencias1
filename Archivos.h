@@ -19,7 +19,9 @@
 
 using namespace std;
 
-std::string eliminarEspaciosBlanco(const std::string& texto) {
+
+
+std::string eliminarEspaciosBlanco(const std::string& texto) {//cumple una funcion en la correcta construccion de las estructuras a partir del archivo datos.txt y el metodo leer
     std::string resultado = texto;
     resultado.erase(std::remove_if(resultado.begin(), resultado.end(), [](unsigned char c) {
         return std::isspace(c);
@@ -38,7 +40,7 @@ vector<string> splitString(const string& str, char delimiter) {//Funcion para sp
     return tokens;
 }
 
-void guardar(list<Ciudad> multilistaCiudad){
+void guardar(list<Ciudad> multilistaCiudad){//ese utiliza para actualizar el archivo datos.txt a partir de las funciones de modificacion
 	ofstream archivo("datos.txt");
     for (auto itk = multilistaCiudad.begin(); itk != multilistaCiudad.end(); ++itk){// Entra a la multilista de ciudades y guarda los valores inicializables
         archivo <<*itk<< endl;
@@ -57,7 +59,7 @@ void guardar(list<Ciudad> multilistaCiudad){
 }
 	
 
-list<Ciudad> leer(){
+list<Ciudad> leer(){// construye las estructuras a partir del archivo datos.txt 
 	list<Ciudad> multilistaCiudad;
 	int numCiudades = 0;
 	int numPartidos = 0;
@@ -70,13 +72,11 @@ list<Ciudad> leer(){
 		while(!archivo.eof()){
 			string linea;
             getline(archivo,linea);
-			//cout << linea << endl;
 			if(linea[0] != ' ' && !linea.empty()){
 				//Codigo para reconstruir una ciudad;
 				vector<string> data = splitString(linea,',');
 				Ciudad c(eliminarEspaciosBlanco(data[0]),data[1],stoi(data[2]));
 				multilistaCiudad.push_back(c);
-				//cout << "Ciudad: " << linea << endl;
 				numCiudades++;
 				numPartidos = 0;
 			}else if(linea[1] != ' ' && !linea.empty()){
@@ -86,7 +86,6 @@ list<Ciudad> leer(){
            		list<Ciudad>::iterator it = multilistaCiudad.begin();
            		advance(it,numCiudades-1);
            		it->listaHabitantes.push_back(p);
-				//cout << "Num Ciudad: " << numCiudades << " Habitante: " << linea << endl;
 			}else if(linea[2]!= ' ' && !linea.empty()){
 				//Codigo para reconstruir partido
 				vector<string> data = splitString(linea,'-');
@@ -98,7 +97,6 @@ list<Ciudad> leer(){
             	list<Ciudad>::iterator it = multilistaCiudad.begin();
             	advance(it,numCiudades-1);
             	it->listaPartidosHabilitados.push_back(p);
-				//cout << "Partido: " << linea << endl;
 				while(!linea.empty()){
 					getline(archivo,linea);
 					if(!linea.empty()){
@@ -120,7 +118,4 @@ list<Ciudad> leer(){
 }
 
 
-void imprimir(list<Ciudad> multilistaCiudad){
-	
-}
 #endif

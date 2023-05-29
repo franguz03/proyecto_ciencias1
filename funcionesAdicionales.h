@@ -16,8 +16,9 @@
 
 using namespace std;
 
+Persona crearPersona();
 
-Persona crearPersona(){
+Persona crearPersona(){// crea una estructura de tipo persona usando entradas por consola
     string nombre, apellido, estado_civil, ciudad_nacimiento, ciudad_residencia, fechaNacimiento;
     long int identificacion;
     char sexo;
@@ -41,7 +42,7 @@ Persona crearPersona(){
     return p;
 }
 
-Partido crearPartido(){
+Partido crearPartido(){// crea una estructura de tipo partido usando entradas por consola
     string nombre;
     cout << "Ingrese nombre del partido: ";
     cin>>nombre;
@@ -55,7 +56,7 @@ Partido crearPartido(){
     return Partido(nombre,representante,representantealcaldia);
 }
 
-Ciudad crearCiudad(){
+Ciudad crearCiudad(){// crea una estructura de tipo ciudad usando entradas por consola
     string nombre, departamento;
     int tamanioConsejo; 
     cout << "Ingrese nombre: ";
@@ -68,7 +69,7 @@ Ciudad crearCiudad(){
     return Ciudad(nombre,departamento,tamanioConsejo);
 }
 
-int calcularEdad(const std::string& fechaNacimiento) {
+int calcularEdad(const std::string& fechaNacimiento) {// calcula la edad de persona, se usa para saber quienes estan habilitados para votar en la lista de habitantes
     std::tm tmFechaNacimiento = {};
     std::istringstream issFechaNacimiento(fechaNacimiento);
     char delimiter;
@@ -90,16 +91,16 @@ int calcularEdad(const std::string& fechaNacimiento) {
     return edad;
 }
 
-void ordenarPorIdentificacion(list<Persona>& listaPersonas) {
+void ordenarPorIdentificacion(list<Persona>& listaPersonas) {//funcion que ordena una lista de persona usando el metodo propio de list sort
     listaPersonas.sort();
 }
 
-void agregarPersonaOrdenada(list<Persona>& listaPersonas, const Persona& nuevaPersona) {
+void agregarPersonaOrdenada(list<Persona>& listaPersonas, const Persona& nuevaPersona) {// agrega una persona de manera ordenada
     auto it = lower_bound(listaPersonas.begin(), listaPersonas.end(), nuevaPersona);
     listaPersonas.insert(it, nuevaPersona);
 }
 
-bool eliminarPorIdentificacion(list<Persona>& listaPersonas, long int identificacion) {
+bool eliminarPorIdentificacion(list<Persona>& listaPersonas, long int identificacion) {// elimina una persona de una lista por identificaion
     auto it = lower_bound(listaPersonas.begin(), listaPersonas.end(), Persona{"","", identificacion,'x',"","","",""});
     if (it != listaPersonas.end() && it->identificacion == identificacion) {
         listaPersonas.erase(it);
@@ -144,7 +145,7 @@ void agregar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciu
     cout << "Ciudad no encontrada";
 }
 
-void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, string nombre_candidato) {
+void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido, string nombre_candidato) {// elimina un candidato al consejo a partir del nombre de este, la ciudad y el partido al que pertenece
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             for (auto& partido : ciudad.listaPartidosHabilitados) {
@@ -157,21 +158,18 @@ void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ci
                         partido.listaCandidatosConsejo.erase(it);
                         guardar(multilistaCiudad);
                         return;
-                        // No es necesario el return en una funci�n void
+                        
                     } else {
                         cout << "Candidato no encontrado en el partido" << endl;
                         return;
-                        // No es necesario el return en una funci�n void
                     }
                 }
             }
             cout << "Partido no encontrado en la ciudad" << endl;
-            return;
-            // No es necesario el return en una funci�n void
+            
         }
     }
     cout << "Ciudad no encontrada" << endl;
- 
     // No es necesario el return en una funci�n void
 }
 
@@ -187,7 +185,7 @@ void agregar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad) {//ag
     cout << "Ciudad no encontrada";
 }
 
-void eliminar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido) {
+void eliminar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, string nombre_partido) { // elimina un partido usando el nombre de este y la ciudad al que pertenece
     for (auto& ciudad : multilistaCiudad) {
         if (ciudad.nombre == nombre_ciudad) {
             auto it = std::find_if(ciudad.listaPartidosHabilitados.begin(), ciudad.listaPartidosHabilitados.end(), [&nombre_partido](const Partido& partido) {
@@ -207,13 +205,13 @@ void eliminar_partido(list<Ciudad>& multilistaCiudad, string nombre_ciudad, stri
     cout << "Ciudad no encontrada" << "\n";
 }
 
-void agregar_ciudad(list<Ciudad>& multilistaCiudad) {
+void agregar_ciudad(list<Ciudad>& multilistaCiudad) {//agrega una ciduad a la lista principal
     cout<<"Ingrese los datos de la ciudad------"<<"\n";
     multilistaCiudad.push_back(crearCiudad());
     guardar(multilistaCiudad);
 }
 
-void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad) {
+void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad) {// elimina una ciudad de la lista principal usando su nombre
     auto it = std::find_if(multilistaCiudad.begin(), multilistaCiudad.end(), [&nombreCiudad](const Ciudad& ciudad) {
         return ciudad.nombre == nombreCiudad;
     });
@@ -227,7 +225,7 @@ void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad)
     }
 }
 
-int censoParticular(Ciudad ciudad){
+int censoParticular(Ciudad ciudad){// calcula el numero de votantes habilitados e una ciudad usando la funcion calcular edad
 	int votantes = 0;
 	for(const auto& persona : ciudad.listaHabitantes){
 		if(calcularEdad(persona.fechaNacimiento)>18){

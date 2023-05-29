@@ -1,0 +1,19 @@
+1---- menu de simulacion--------
+    tiene 3 opciones: modificar, consultar y simular
+
+    modificar tiene su porpio submenu con las opciones igual que modificar, cada uno cuenta con una opcion para volver al menu menu_principal
+    los resultados de estadisticas se mustruan una vez se simula, las simulaciones tambien se ejecutan con la modificaciones que el usuario hizo previamente
+    una vez se simula se muestran los resultados del proceso y se muestra otra vez el menu menu_principal
+    para las consultas y eliminacion los datos que se solicitan deben ser escritos tal cual como estan en el archivo datos.txt, de otra manera se mostrara que no se encuentra la consulta o eliminacion soliticada
+
+2---- datos.txt-------
+
+    el archivo no debe ser modificado de manera manual pues afectara el proceso de lectura, solo mediante los metodos 
+    el archivo cuenta con los minimos soliticados (10 ciudades, 10 candidatos a consejo por ciudad y 5 partidos)
+    aclaramos que existe repeticion en datos candidatos y personas entre ciudades y partidos por comodidad 
+    los cambios que haga el usuario de cargan instantaneamente al txt
+
+3---estructura de ciudad,partido,persona-----
+
+    no todas las ciudades tiene los mismos partidos, el no tenerlos o que no este habilidatos se interpreta como que no hay ningun candidato por ese partido 
+    las ciudades de nacimiento y recidencia no afectaran en el proceso de votacion de un candidato

@@ -14,7 +14,7 @@
 
 using namespace std;
 
-void generarVotos(vector<Persona> listaCandidatos, int votantes){
+void generarVotos(vector<Persona> listaCandidatos, int votantes){//simula de manera aleatoria el umero de votos por candidato usando el numero de votantes habilitados por ciudad
 	int votantesRestantes = votantes;
 	for(auto& persona : listaCandidatos){
 			if (votantesRestantes == 0) {
@@ -27,7 +27,7 @@ void generarVotos(vector<Persona> listaCandidatos, int votantes){
 		}
 }
 
-void estadisticas(list<Ciudad> listaCiudades){
+void estadisticas(list<Ciudad> listaCiudades){// una vez hecha la simulacion muestra las estadisticas de los votos por porcentaje y sexo
 	cout << endl << endl << "-----------------------------------  ESTADISTICAS  -----------------------------------"<< endl << endl;
 	struct aux{
 		string nombre;
@@ -92,7 +92,7 @@ void estadisticas(list<Ciudad> listaCiudades){
     	}	
 }
 
-void simulacion(){
+void simulacion(){// funcion principal que simula el proceso, muestra al final los resultados y las estadisticas
 	srand(time(0));
 	list<Ciudad> data = leer();
 	for( auto& ci : data){

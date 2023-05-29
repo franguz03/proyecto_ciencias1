@@ -23,20 +23,329 @@ medallo,antioquia,2
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Mariano,Silva,Soltero,Cartagena,Bogota,26581934,M,28/07/1988
    Javier,Luna,Casado,Medellin,Barranquilla,42981376,M,17/11/1983
    Fernanda,Acosta,Divorciado,Bogota,Cali,53792184,F,25/03/1975
+   Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
 
   liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Raul,Contreras,Unión libre,Barranquilla,Medellin,79163842,M,11/09/1997
    Carla,Paredes,Casado,Medellin,Cali,48273951,F,09/12/1979
    Diego,Ortiz,Divorciado,Cali,Barranquilla,91847362,M,03/02/1982
+   Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
 
 bogota,cundinamarca,2
  Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
  Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
 
   conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
 
   liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
    Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   janeth,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   natalia,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   messi,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+cali,cauca,2
+ santiago,Perez,Soltero,Medellin,Bogota,123489,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,1233434,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  alianza-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   deicy,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   nancy,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   jesus,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  comunista-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   jhoana,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   maria,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   alfonso,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+tunja,boyaca,2
+ danna,Perez,Soltero,Medellin,Bogota,123489,F,10/08/1935
+ javier,garzon,Soltero,Medellin,Bogota,123343,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  alianza-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   laura,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   dayana,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  comunista-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   luna,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   miguel,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   fernando,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+neiva,huila,2
+ santiago,Perez,Soltero,Medellin,Bogota,343489,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,1245,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  alianza-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   samanta,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   felipe,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  comunista-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   july,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   lucho,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+riohacha,guajira,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   juanita,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   daniel,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   fernanda,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   dannia,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   oscar,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+pasto,nariño,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   solangie,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   camila,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   marlon,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   ximena,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   carlos,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+popayan,cauca,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   karen,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   patricia,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   juanes,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   gaby,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   carla,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+villavicencio,meta,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   anna,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   luz,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   patricio,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   juana,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   larosa,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   valdivia,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+pereira,risaralda,2
+ Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/1935
+ Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/1970
+ Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+
+  nacional-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   jenn,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   sara,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   jose,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   jennifer,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+   luisa,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+   felipe,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
 
