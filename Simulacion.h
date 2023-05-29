@@ -14,7 +14,7 @@
 
 using namespace std;
 
-vector<Persona> generarVotos(vector<Persona> listaCandidatos, int votantes){
+void generarVotos(vector<Persona> listaCandidatos, int votantes){
 	int votantesRestantes = votantes;
 	for(auto& persona : listaCandidatos){
 			if (votantesRestantes == 0) {

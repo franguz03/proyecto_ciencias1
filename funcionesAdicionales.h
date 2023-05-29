@@ -156,18 +156,22 @@ void eliminar_candidato_consejo(list<Ciudad>& multilistaCiudad, string nombre_ci
                     if (it != partido.listaCandidatosConsejo.end()) {
                         partido.listaCandidatosConsejo.erase(it);
                         guardar(multilistaCiudad);
+                        return;
                         // No es necesario el return en una funci�n void
                     } else {
                         cout << "Candidato no encontrado en el partido" << endl;
+                        return;
                         // No es necesario el return en una funci�n void
                     }
                 }
             }
             cout << "Partido no encontrado en la ciudad" << endl;
+            return;
             // No es necesario el return en una funci�n void
         }
     }
     cout << "Ciudad no encontrada" << endl;
+ 
     // No es necesario el return en una funci�n void
 }
 
@@ -217,6 +221,7 @@ void eliminar_ciudad(list<Ciudad>& multilistaCiudad, const string& nombreCiudad)
     if (it != multilistaCiudad.end()) {
         multilistaCiudad.erase(it);
         guardar(multilistaCiudad);
+        return;
     } else {
         cout << "Ciudad no encontrada" << endl;
     }

@@ -119,6 +119,7 @@ list<Ciudad> leer(){
 	return multilistaCiudad;
 }
 
+
 void imprimir(list<Ciudad> multilistaCiudad){
 	
 }
