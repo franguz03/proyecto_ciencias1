@@ -1,3 +1,50 @@
+Cicomland,Unidistrital,2
+ Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945
+ Pedro,Lopez,Soltero,Cali,Medellin,24681357,M,28/06/1953
+ Maria,Martinez,Divorciado,Barranquilla,Medellin,13579246,F,02/09/1967
+ Luis,Gomez,Unión libre,Cartagena,Barranquilla,57924683,M,11/12/1972
+ Laura,Fernandez,Soltero,Medellin,Cali,86429753,F,24/02/1981
+ Andres,Gutierrez,Casado,Cali,Bogota,31968425,M,08/05/1995
+ Carolina,Rojas,Soltero,Bogota,Cali,75314698,F,17/09/1989
+ Carlos,Moreno,Casado,Barranquilla,Cartagena,68257914,M,03/07/2003
+ Sofia,Vargas,Divorciado,Medellin,Barranquilla,91475362,F,19/10/1976
+ Alejandro,Mendoza,Unión libre,Barranquilla,Cartagena,42638957,M,14/04/1992
+ Valentina,Ortega,Casado,Cartagena,Medellin,79564328,F,21/11/1985
+ Gabriel,Rivera,Soltero,Cali,Medellin,25873196,M,30/01/2001
+ Camila,Santos,Divorciado,Bogota,Barranquilla,63928517,F,06/06/1998
+ Julian,Hernandez,Viudo,Medellin,Cartagena,57291638,M,23/03/1978
+ Daniela,Castro,Soltero,Barranquilla,Bogota,89316527,F,27/12/1984
+ Andrea,Villa,Divorciado,Cartagena,Medellin,71532694,F,09/02/1958
+ Diego,Martinez,Casado,Cali,Barranquilla,46382915,M,12/10/2007
+ Mariana,Perez,Soltero,Bogota,Cartagena,25168397,F,25/01/1965
+ Ricardo,Gomez,Viudo,Medellin,Barranquilla,97853162,M,07/04/1943
+
+  conservador-Juan,Perez,Soltero,Medellin,Bogota,123456789,M,10/08/2020-ana,ramirez,casada,bogota,cincomland,98765432,F,29/06/1967
+   Margarita,Lopez,Union libre,Bogota,Bogota,76543256,F,09/01/1973
+   chavela,vargas,Casada,Medellin,Medellin,13693256,F,19/05/1972
+   jaime,molina,casado,bogota,Cicomland,93256136,M,15/09/1977
+   adrian,olmos,soltero,bogo,bogo,1010043,M,10/08/1999
+
+  verde-Maria,Moliner,UnionLibre,Cicomland,Cicomland,1010106332,F,15/11/1975-Maria,Moliner,UnionLibre,Cicomland,Cicomland,1010106332,F,15/11/1975
+   Tomas,Alba,Casado,Medellin,Medellin,75395168,M,15/02/1973
+   Jorge,Rocha,Divorciado,Bogota,Bogota,75395168,M,12/08/1973
+   franco,guzman,soltero,bogo,bogo,10323,M,24/02/2004
+
+  polo-Luis,Lopez,Divorciado,Bogota,Bogota,56824973,M,04/07/1970-Luis,Lopez,Divorciado,Bogota,Bogota,56824973,M,04/07/1970
+   Jose,Gomez,Divorciado,Cicomland,Cicomland,73498273,M,03/04/1985
+   Mario,Moreno,Soltero,Cicomland,Cicomland,73498273,M,02/02/1985
+   Carlos,Garcia,Soltero,Cicomland,Cicomland,98273734,M,04/04/1974
+
+  liberal-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,Rodriguez,Soltero,Medellin,Medellin,12345678,M,05/06/1960
+   Sara,Connor,Soltera,Cali,Cali,1210123623,F,05/05/1978
+   Alfonsina,Storni,Soltera,Cicomland,Cicomland,10121235,F,08/06/1968
+   Teresa,Rozo,Divorciada,Cicomland,Cicomland,21235101,F,06/08/1986
+
+  LaU-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020-Pedro,garzon,Soltero,Medellin,Bogota,123456789,M,10/08/2020
+   Juan,Perez,Casado,Bogota,Bogota,32165487,M,22/03/1970   
+   Mark,Twain,Union Libre,Cali,Cali,326654876,M,18/01/1974
+   Carlos,Santana,Casado,Cali,Cali,54876326,M,11/08/1949
+
 medallo,antioquia,2
  Juan,Perez,Soltero,Medellin,Bogota,12345671,M,10/08/1920
  Ana,Gonzalez,Casado,Bogota,Cali,98765432,F,15/03/1945

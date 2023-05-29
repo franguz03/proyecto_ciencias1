@@ -24,7 +24,10 @@ int main(int argc, char *argv[]){
 
 
 void menu_principal(){
+    
     list<Ciudad> listaLecturaCiudades = leer();
+    partidosporciudad(listaLecturaCiudades);
+
     cout<<"programa de simulacion"<<"\n";
     cout<<"\n"<<"1. modificar datos"<<"\n"<<"2. consultar datos"<<"\n"<<"3. simular votaciones"<<"\n"<<"\n";
     int opcion;
@@ -51,13 +54,19 @@ void menu_principal(){
 }
 
 void menu_consultas(list<Ciudad> multilistaCiudad){
-    cout<<"\n"<<"1. DADO UN PARTIDO Y UNA CIUDAD MOSTRAR LA LISTA DE SUS CANDIDATOS AL CONSEJO Y EL CANDIDATO A LA ALCALDIA"<<"\n"<<"2. DADO UN PARTIDO MOSTRAR LA LISTA DE CANDIDATOS A ALCALDIAS DE CADA UNA DE LAS DIFERENTES CIUDADES"<<"\n"<<"3. DADO UN PARTIDO MOSTRAR LAS LISTAS DE CANDIDATOS A CADA UNO DE DIFERENTES LOS CONSEJOS"<<"\n"<<"4. DADA UNA CIUDAD MOSTRAR POR CADA PARTIDO EL CANDIDATO A LA ALCALDIA Y LOS CANDIDATOS AL CONSEJO"<<"\n"<<"5. DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS A LA ALCALDIA INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"6. DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS AL CONSEJO INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"7. POR CADA CIUDAD MOSTRAR LA CANTIDAD DE PERSONAS HABILITADAS PARA VOTAR"<<"\n"<<"8. Volver atras"<<"\n"<<"\n";
+    cout<<"\n"<<"0. ciudades para el proceso"<<"\n"<<"1. DADO UN PARTIDO Y UNA CIUDAD MOSTRAR LA LISTA DE SUS CANDIDATOS AL CONSEJO Y EL CANDIDATO A LA ALCALDIA"<<"\n"<<"2. DADO UN PARTIDO MOSTRAR LA LISTA DE CANDIDATOS A ALCALDIAS DE CADA UNA DE LAS DIFERENTES CIUDADES"<<"\n"<<"3. DADO UN PARTIDO MOSTRAR LAS LISTAS DE CANDIDATOS A CADA UNO DE DIFERENTES LOS CONSEJOS"<<"\n"<<"4. DADA UNA CIUDAD MOSTRAR POR CADA PARTIDO EL CANDIDATO A LA ALCALDIA Y LOS CANDIDATOS AL CONSEJO"<<"\n"<<"5. DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS A LA ALCALDIA INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"6. DADA UNA CIUDAD MOSTRAR EL TARJETON DE CANDIDATOS AL CONSEJO INCLUYENDO EL VOTO EN BLANCO"<<"\n"<<"7. POR CADA CIUDAD MOSTRAR LA CANTIDAD DE PERSONAS HABILITADAS PARA VOTAR"<<"\n"<<"8. Volver atras"<<"\n"<<"\n";
     int opcion;
     cin>>opcion;
     string ciudad;
     string partido;
     switch (opcion)
     {
+
+    case 0:
+    cout<<"lista de ciduades ";
+    listciudad(multilistaCiudad);
+    menu_consultas(multilistaCiudad);
+
     case 1:
         cout << "Introduce la partido: ";
         cin>> partido;
@@ -102,6 +111,7 @@ void menu_consultas(list<Ciudad> multilistaCiudad){
 
     case 8:
         menu_principal();
+
 
     default:
         cout<<"opcioin no valida";

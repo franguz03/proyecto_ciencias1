@@ -17,6 +17,23 @@
 #include "funcionesAdicionales.h"
 
 using namespace std;
+// consulta 0 lista de ciudades 
+void listciudad(list<Ciudad> multilistaCiudad){
+	for (const auto& ciudad : multilistaCiudad) {
+		cout<< ciudad.nombre << "\n ";
+	}
+	}
+//
+
+void partidosporciudad(list<Ciudad> multilistaCiudad){
+	for (const auto& ciudad : multilistaCiudad) {
+		cout<< ciudad.nombre << "\n ";
+		for (const auto& PARTIDO : ciudad.listaPartidosHabilitados) {
+			cout<<"---" <<PARTIDO.nombre << "\n ";
+	}
+
+	}
+	}
 
 // ------------ CONSULTA #1 DADO UN PARTIDO Y UNA CIUDAD MOSTRAR LA LISTA DE SUS CANDIDATOS AL CONSEJO Y EL CANDIDATO A LA ALCALDIA
 void candidatos_ciudad_partido(list<Ciudad> multilistaCiudad,string nombre_ciudad, string nombre_partido){
@@ -151,14 +168,19 @@ void tarjeton_Ciudad_Consejo(list<Ciudad> multilistaCiudad, string nombreCiudad)
 // ------------ CONSULTA #7 POR CADA CIUDAD MOSTRAR LA CANTIDAD DE PERSONAS HABILITADAS PARA VOTAR
 int censo_Electoral(list<Ciudad> multilistaCiudad){ // Por cada ciudad, mostrara la cantidad de personas habilitadas para votar 
 	int votantes = 0;
+	
 	for(const auto& ciudad : multilistaCiudad){
 		cout << "Censo para " << ciudad.nombre << endl;
+		int votantes_ciudad=0;
 		for(const auto& persona : ciudad.listaHabitantes){
 			cout << persona.nombre << " " << persona.apellido <<", fecha de nacimiento: " << persona.fechaNacimiento <<", Edad: " << calcularEdad(persona.fechaNacimiento) << endl;
 			if(calcularEdad(persona.fechaNacimiento)>18){
 				votantes++;
+				votantes_ciudad++;
 			}
+
 		}	
+		cout<<"cantidad por "<<ciudad.nombre<<" : "<<votantes_ciudad;
 		cout << endl;
 	}
 	cout << "Cantidad de personas habilitadas para votar: " << votantes;
